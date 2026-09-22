@@ -1,0 +1,1315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Active &amp; Passive Voice &mdash; 1000 Sentences</title>
+<meta name="description" content="Master active and passive voice with 1,000 everyday English sentences across 20 categories. Search, filter by tense, and practice daily.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f3f0e8;
+  --surface:#fff;
+  --surface-alt:#f9f7f3;
+  --primary:#1a6b5a;
+  --primary-hover:#15574a;
+  --primary-light:#e0f0eb;
+  --accent:#c97d1a;
+  --accent-light:#fef4e2;
+  --text:#2b3530;
+  --text-sec:#627370;
+  --text-inv:#fff;
+  --border:#d8d2c6;
+  --active-bar:#1a6b5a;
+  --passive-bar:#c97d1a;
+  --active-bg:#e8f4f0;
+  --passive-bg:#fef4e2;
+  --tag-bg:#eee9df;
+  --tag-text:#5a5244;
+  --shadow:0 1px 3px rgba(40,50,46,.07);
+  --shadow-lg:0 4px 12px rgba(40,50,46,.1);
+  --radius:10px;
+  --font-d:'Bitter','Georgia',serif;
+  --font-b:'Source Sans 3','Segoe UI','Helvetica Neue',Arial,sans-serif;
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#181d1b;--surface:#222927;--surface-alt:#1e2422;
+    --primary:#40c9a2;--primary-hover:#5dd8b4;--primary-light:#1a3530;
+    --accent:#f0a844;--accent-light:#3a2e1a;
+    --text:#e2ded6;--text-sec:#9aa69f;--text-inv:#181d1b;
+    --border:#3a403d;--active-bar:#40c9a2;--passive-bar:#f0a844;
+    --active-bg:#1c3830;--passive-bg:#3a2e1a;
+    --tag-bg:#2e3330;--tag-text:#b0aca2;
+    --shadow:0 1px 3px rgba(0,0,0,.2);--shadow-lg:0 4px 12px rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#181d1b;--surface:#222927;--surface-alt:#1e2422;
+  --primary:#40c9a2;--primary-hover:#5dd8b4;--primary-light:#1a3530;
+  --accent:#f0a844;--accent-light:#3a2e1a;
+  --text:#e2ded6;--text-sec:#9aa69f;--text-inv:#181d1b;
+  --border:#3a403d;--active-bar:#40c9a2;--passive-bar:#f0a844;
+  --active-bg:#1c3830;--passive-bg:#3a2e1a;
+  --tag-bg:#2e3330;--tag-text:#b0aca2;
+  --shadow:0 1px 3px rgba(0,0,0,.2);--shadow-lg:0 4px 12px rgba(0,0,0,.3);
+}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);color:var(--text);
+  font-family:var(--font-b);line-height:1.6;
+  padding:0 16px;min-height:100vh;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--primary);text-decoration:none}
+a:hover{text-decoration:underline}
+
+/* ---------- Layout ---------- */
+.wrap{max-width:760px;margin:0 auto;padding:32px 0 64px}
+
+/* ---------- Header ---------- */
+.hero{margin-bottom:28px}
+.hero h1{
+  font-family:var(--font-d);font-weight:700;
+  font-size:clamp(1.7rem,4.5vw,2.4rem);
+  line-height:1.2;color:var(--text);
+  text-wrap:balance;margin-bottom:6px;
+}
+.hero p{color:var(--text-sec);font-size:.95rem;max-width:540px}
+
+/* ---------- Grammar box ---------- */
+.grammar{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);padding:20px 22px;
+  margin-bottom:24px;box-shadow:var(--shadow);
+}
+.grammar h2{font-family:var(--font-d);font-size:1.05rem;margin-bottom:12px;color:var(--primary)}
+.formula{display:flex;flex-wrap:wrap;align-items:center;gap:8px;font-size:.93rem}
+.formula .a{background:var(--active-bg);color:var(--active-bar);padding:4px 10px;border-radius:6px;font-weight:600;font-size:.84rem}
+.formula .p{background:var(--passive-bg);color:var(--passive-bar);padding:4px 10px;border-radius:6px;font-weight:600;font-size:.84rem}
+.formula .arr{color:var(--text-sec);font-size:1.2rem}
+.grammar .note{margin-top:10px;font-size:.86rem;color:var(--text-sec);line-height:1.55}
+
+/* ---------- Toolbar ---------- */
+.toolbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:16px}
+.badge{
+  display:inline-flex;align-items:center;gap:4px;
+  background:var(--primary);color:var(--text-inv);
+  padding:4px 12px;border-radius:14px;
+  font-size:.78rem;font-weight:700;
+  font-variant-numeric:tabular-nums;
+}
+.btn{
+  padding:7px 14px;border-radius:8px;border:1px solid var(--primary);
+  background:transparent;color:var(--primary);
+  font-family:var(--font-b);font-weight:600;font-size:.82rem;
+  cursor:pointer;transition:background .2s,color .2s;
+  white-space:nowrap;
+}
+.btn:hover,.btn:focus-visible{background:var(--primary);color:var(--text-inv);outline:none}
+.btn-sm{padding:5px 10px;font-size:.78rem}
+.theme-toggle{margin-left:auto;border-color:var(--border);color:var(--text-sec)}
+.theme-toggle:hover{border-color:var(--primary);color:var(--primary);background:transparent}
+
+/* ---------- Controls (sticky) ---------- */
+.controls{
+  position:sticky;top:0;z-index:10;
+  background:var(--bg);
+  padding:12px 0 8px;
+  border-bottom:1px solid var(--border);
+}
+.search{position:relative;margin-bottom:10px}
+.search input{
+  width:100%;padding:10px 14px 10px 40px;
+  border:1px solid var(--border);border-radius:8px;
+  font-family:var(--font-b);font-size:.95rem;
+  background:var(--surface);color:var(--text);
+  outline:none;transition:border-color .2s;
+}
+.search input:focus{border-color:var(--primary)}
+.search input::placeholder{color:var(--text-sec)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);color:var(--text-sec);pointer-events:none}
+.pills{display:flex;gap:6px;overflow-x:auto;padding-bottom:6px;scrollbar-width:none}
+.pills::-webkit-scrollbar{display:none}
+.pill{
+  white-space:nowrap;padding:5px 13px;border-radius:20px;
+  border:1px solid var(--border);background:var(--surface);
+  color:var(--text-sec);font-size:.8rem;font-weight:600;
+  cursor:pointer;transition:all .2s;font-family:var(--font-b);flex-shrink:0;
+}
+.pill:hover{border-color:var(--primary);color:var(--primary)}
+.pill.on{background:var(--primary);color:var(--text-inv);border-color:var(--primary)}
+.tpills{display:flex;gap:5px;overflow-x:auto;padding-bottom:4px;margin-top:6px;scrollbar-width:none}
+.tpills::-webkit-scrollbar{display:none}
+.tp{
+  white-space:nowrap;padding:4px 11px;border-radius:16px;
+  border:1px solid var(--border);background:var(--surface-alt);
+  color:var(--text-sec);font-size:.75rem;font-weight:600;
+  cursor:pointer;transition:all .2s;font-family:var(--font-b);flex-shrink:0;
+}
+.tp:hover{border-color:var(--accent);color:var(--accent)}
+.tp.on{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+/* ---------- Cards ---------- */
+.cards{display:flex;flex-direction:column;gap:10px;margin-top:16px}
+.card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);overflow:hidden;
+  box-shadow:var(--shadow);transition:box-shadow .2s;
+}
+.card:hover{box-shadow:var(--shadow-lg)}
+.card.hl{border-color:var(--primary);box-shadow:var(--shadow-lg)}
+.card-head{display:flex;align-items:center;gap:6px;padding:10px 16px 6px;flex-wrap:wrap}
+.card-num{font-size:.7rem;font-weight:700;color:var(--text-sec);font-variant-numeric:tabular-nums;min-width:30px}
+.ctag{font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--tag-bg);color:var(--tag-text)}
+.ttag{font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:10px;background:var(--primary-light);color:var(--primary)}
+.pair{display:grid;grid-template-columns:1fr auto 1fr;gap:0;padding:6px 16px 16px}
+.vlbl{font-size:.64rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:4px}
+.va .vlbl{color:var(--active-bar)}
+.vp .vlbl{color:var(--passive-bar)}
+.va{border-left:3px solid var(--active-bar);padding:10px 12px;border-radius:6px;background:var(--active-bg)}
+.vp{border-left:3px solid var(--passive-bar);padding:10px 12px;border-radius:6px;background:var(--passive-bg)}
+.vtxt{font-size:.95rem;line-height:1.5}
+.parr{display:flex;align-items:center;justify-content:center;padding:0 8px;color:var(--text-sec);font-size:1.2rem}
+@media(max-width:540px){
+  .pair{grid-template-columns:1fr;gap:6px}
+  .parr{transform:rotate(90deg);padding:2px 0}
+}
+
+/* ---------- Load more / empty ---------- */
+.load-more{
+  display:block;width:100%;padding:13px;margin-top:14px;
+  border:1px dashed var(--border);border-radius:var(--radius);
+  background:transparent;color:var(--primary);
+  font-family:var(--font-b);font-weight:600;font-size:.9rem;
+  cursor:pointer;transition:all .2s;
+}
+.load-more:hover{background:var(--primary-light);border-color:var(--primary)}
+.empty{text-align:center;padding:40px 20px;color:var(--text-sec);font-size:.95rem}
+
+/* ---------- Back to top ---------- */
+.btt{
+  position:fixed;bottom:24px;right:24px;width:42px;height:42px;
+  border-radius:50%;border:1px solid var(--border);
+  background:var(--surface);color:var(--primary);
+  box-shadow:var(--shadow-lg);cursor:pointer;
+  display:none;align-items:center;justify-content:center;
+  font-size:1.1rem;transition:all .2s;z-index:20;
+}
+.btt:hover{background:var(--primary);color:var(--text-inv)}
+.btt.show{display:flex}
+
+/* ---------- Footer ---------- */
+footer{
+  text-align:center;color:var(--text-sec);font-size:.8rem;
+  margin-top:36px;padding-top:18px;border-top:1px solid var(--border);
+}
+footer a{color:var(--primary)}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <!-- Hero -->
+  <div class="hero">
+    <h1>Active &amp; Passive Voice</h1>
+    <p>1,000 everyday English sentences to master voice transformation. Browse by category, filter by tense, and practise daily.</p>
+  </div>
+
+  <!-- Grammar quick reference -->
+  <div class="grammar">
+    <h2>Quick Reference</h2>
+    <div class="formula">
+      <span class="a">Active</span>
+      <span>Subject + Verb + Object</span>
+      <span class="arr">&rarr;</span>
+      <span class="p">Passive</span>
+      <span>Object + <em>be</em> + Past Participle (+ by Subject)</span>
+    </div>
+    <p class="note">
+      In active voice, the subject performs the action. In passive voice, the subject receives it.
+      The verb changes to <strong>be + V3</strong> (past participle). The doer may appear after "by" or be dropped when obvious.
+    </p>
+  </div>
+
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <span class="badge" id="countBadge">1000 sentences</span>
+    <button class="btn" onclick="showRandom()" aria-label="Random sentence">&#9858; Random</button>
+    <button class="btn btn-sm theme-toggle" onclick="toggleTheme()" id="themeBtn" aria-label="Toggle theme">&#9790; Theme</button>
+  </div>
+
+  <!-- Controls -->
+  <div class="controls">
+    <div class="search">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="text" id="q" placeholder="Search any word or phrase..." aria-label="Search sentences">
+    </div>
+    <div class="pills" id="catF"></div>
+    <div class="tpills" id="tenF"></div>
+  </div>
+
+  <!-- Sentence cards -->
+  <div class="cards" id="list"></div>
+  <button class="load-more" id="more" onclick="loadMore()">Show more sentences</button>
+  <div class="empty" id="noResults" style="display:none">No sentences match your filters. Try a different keyword or category.</div>
+
+  <footer>
+    Active &amp; Passive Voice &mdash; 1,000 Sentences for Daily Practice
+  </footer>
+</div>
+
+<!-- Back to top -->
+<button class="btt" id="btt" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&uarr;</button>
+
+<script>
+// ===== DATA =====
+const C=["Daily Routine","Kitchen & Cooking","Work & Office","Education","Shopping","Travel","Health & Body","Technology","Home & Cleaning","Family","Sports & Games","Nature & Weather","Communication","Food & Dining","Clothes & Fashion","Entertainment","Government & Law","Business","Science","Arts & Culture"];
+const T=["Simple Present","Simple Past","Simple Future","Present Continuous","Past Continuous","Present Perfect","Past Perfect","Modal Verbs"];
+
+// [catIdx, tenseIdx, "active", "passive"]
+const D=[
+[0,0,"She brushes her teeth every morning.","Her teeth are brushed every morning."],
+[0,0,"He reads the newspaper at breakfast.","The newspaper is read at breakfast."],
+[0,0,"They walk the dog twice a day.","The dog is walked twice a day."],
+[0,0,"She sets the alarm for 6 AM.","The alarm is set for 6 AM."],
+[0,0,"He locks the door every night.","The door is locked every night."],
+[0,0,"My mother prepares lunch daily.","Lunch is prepared by my mother daily."],
+[0,0,"We clean the kitchen after dinner.","The kitchen is cleaned after dinner."],
+[0,0,"She waters the plants every evening.","The plants are watered every evening."],
+[0,0,"He irons his shirt before work.","His shirt is ironed before work."],
+[0,0,"They feed the cat at noon.","The cat is fed at noon."],
+[0,1,"She washed the dishes last night.","The dishes were washed last night."],
+[0,1,"He made the bed this morning.","The bed was made this morning."],
+[0,1,"They packed their bags yesterday.","Their bags were packed yesterday."],
+[0,1,"She combed her hair before leaving.","Her hair was combed before leaving."],
+[0,1,"He switched off all the lights.","All the lights were switched off."],
+[0,1,"My father drove the car to work.","The car was driven to work by my father."],
+[0,1,"She hung the towel on the rack.","The towel was hung on the rack."],
+[0,1,"He mopped the floor after dinner.","The floor was mopped after dinner."],
+[0,1,"They finished breakfast at eight.","Breakfast was finished at eight."],
+[0,1,"She polished her shoes yesterday.","Her shoes were polished yesterday."],
+[0,2,"She will wake up the children at seven.","The children will be woken up at seven."],
+[0,2,"He will lock the gate tonight.","The gate will be locked tonight."],
+[0,2,"They will clean the house tomorrow.","The house will be cleaned tomorrow."],
+[0,2,"I will prepare dinner this evening.","Dinner will be prepared this evening."],
+[0,2,"She will iron the clothes later.","The clothes will be ironed later."],
+[0,2,"He will take the garbage out.","The garbage will be taken out."],
+[0,3,"She is brushing her hair right now.","Her hair is being brushed right now."],
+[0,3,"He is making breakfast at the moment.","Breakfast is being made at the moment."],
+[0,3,"They are washing the car outside.","The car is being washed outside."],
+[0,3,"I am setting the table for dinner.","The table is being set for dinner."],
+[0,3,"She is folding the laundry.","The laundry is being folded."],
+[0,4,"He was reading a book when I arrived.","A book was being read when I arrived."],
+[0,4,"She was cleaning the room all morning.","The room was being cleaned all morning."],
+[0,4,"They were preparing lunch at noon.","Lunch was being prepared at noon."],
+[0,5,"She has already made the bed.","The bed has already been made."],
+[0,5,"He has brushed his teeth.","His teeth have been brushed."],
+[0,5,"They have washed all the dishes.","All the dishes have been washed."],
+[0,5,"I have set the alarm for tomorrow.","The alarm has been set for tomorrow."],
+[0,5,"She has watered the garden.","The garden has been watered."],
+[0,5,"He has locked both doors.","Both doors have been locked."],
+[0,6,"She had finished her chores before noon.","Her chores had been finished before noon."],
+[0,6,"He had cleaned the bathroom before the guests came.","The bathroom had been cleaned before the guests came."],
+[0,6,"They had packed everything before the taxi arrived.","Everything had been packed before the taxi arrived."],
+[0,7,"She can prepare dinner in thirty minutes.","Dinner can be prepared in thirty minutes."],
+[0,7,"He must lock the door before leaving.","The door must be locked before leaving."],
+[0,7,"You should brush your teeth twice a day.","Teeth should be brushed twice a day."],
+[0,7,"They may cancel the morning walk.","The morning walk may be cancelled."],
+[0,7,"We must take out the trash tonight.","The trash must be taken out tonight."],
+[0,7,"He should iron the uniform today.","The uniform should be ironed today."],
+[0,7,"She can wake up early without an alarm.","An early wake-up can be managed without an alarm."],
+[1,0,"She chops the vegetables for soup.","The vegetables are chopped for soup."],
+[1,0,"He boils water for tea every morning.","Water is boiled for tea every morning."],
+[1,0,"They bake bread on Sundays.","Bread is baked on Sundays."],
+[1,0,"She stirs the sauce carefully.","The sauce is stirred carefully."],
+[1,0,"He peels the potatoes before cooking.","The potatoes are peeled before cooking."],
+[1,0,"My grandmother makes fresh chapatis daily.","Fresh chapatis are made by my grandmother daily."],
+[1,0,"She adds salt to the curry.","Salt is added to the curry."],
+[1,0,"He grinds the spices in a mortar.","The spices are ground in a mortar."],
+[1,0,"They fry the fish in oil.","The fish is fried in oil."],
+[1,0,"She serves breakfast at eight.","Breakfast is served at eight."],
+[1,1,"He roasted the chicken for two hours.","The chicken was roasted for two hours."],
+[1,1,"She baked a chocolate cake yesterday.","A chocolate cake was baked yesterday."],
+[1,1,"They prepared a special meal for the guests.","A special meal was prepared for the guests."],
+[1,1,"He washed all the utensils after cooking.","All the utensils were washed after cooking."],
+[1,1,"She mixed the batter for pancakes.","The batter was mixed for pancakes."],
+[1,1,"He sliced the onions very thin.","The onions were sliced very thin."],
+[1,1,"She marinated the meat overnight.","The meat was marinated overnight."],
+[1,1,"They cooked dinner together last night.","Dinner was cooked together last night."],
+[1,1,"He heated the leftover food in the microwave.","The leftover food was heated in the microwave."],
+[1,1,"She decorated the cake with icing.","The cake was decorated with icing."],
+[1,2,"She will prepare the salad before the party.","The salad will be prepared before the party."],
+[1,2,"He will boil the eggs for breakfast.","The eggs will be boiled for breakfast."],
+[1,2,"They will grill the vegetables tonight.","The vegetables will be grilled tonight."],
+[1,2,"I will bake cookies this weekend.","Cookies will be baked this weekend."],
+[1,2,"She will make tea for everyone.","Tea will be made for everyone."],
+[1,3,"She is frying the samosas right now.","The samosas are being fried right now."],
+[1,3,"He is kneading the dough.","The dough is being kneaded."],
+[1,3,"They are grilling the chicken on the barbecue.","The chicken is being grilled on the barbecue."],
+[1,3,"She is pouring the batter into the pan.","The batter is being poured into the pan."],
+[1,3,"He is washing the rice before cooking.","The rice is being washed before cooking."],
+[1,4,"She was stirring the soup when the phone rang.","The soup was being stirred when the phone rang."],
+[1,4,"He was cutting the fruit when he slipped.","The fruit was being cut when he slipped."],
+[1,4,"They were roasting corn on the fire.","Corn was being roasted on the fire."],
+[1,5,"She has already prepared the dough.","The dough has already been prepared."],
+[1,5,"He has seasoned the chicken.","The chicken has been seasoned."],
+[1,5,"They have set the oven to 200 degrees.","The oven has been set to 200 degrees."],
+[1,5,"I have cleaned the kitchen counter.","The kitchen counter has been cleaned."],
+[1,5,"She has poured the soup into bowls.","The soup has been poured into bowls."],
+[1,6,"He had chopped all the onions before I arrived.","All the onions had been chopped before I arrived."],
+[1,6,"She had already mixed the ingredients before starting.","The ingredients had already been mixed before starting."],
+[1,6,"They had boiled the water before adding the pasta.","The water had been boiled before adding the pasta."],
+[1,7,"You should preheat the oven before baking.","The oven should be preheated before baking."],
+[1,7,"She can make biryani in an hour.","Biryani can be made in an hour."],
+[1,7,"He must wash his hands before cooking.","Hands must be washed before cooking."],
+[1,7,"They may add more chili to the dish.","More chili may be added to the dish."],
+[1,7,"We should store the leftovers in the fridge.","The leftovers should be stored in the fridge."],
+[1,7,"You can serve the food now.","The food can be served now."],
+[1,7,"She must measure the flour carefully.","The flour must be measured carefully."],
+[1,7,"He could taste the sweetness in the sauce.","The sweetness in the sauce could be tasted."],
+[1,7,"They might order pizza instead.","Pizza might be ordered instead."],
+[1,0,"She washes the dishes after every meal.","The dishes are washed after every meal."],
+[2,0,"The manager assigns tasks every Monday.","Tasks are assigned every Monday."],
+[2,0,"She answers phone calls all day.","Phone calls are answered all day."],
+[2,0,"He writes reports every week.","Reports are written every week."],
+[2,0,"They hold meetings on Fridays.","Meetings are held on Fridays."],
+[2,0,"The company pays salaries on the first of every month.","Salaries are paid on the first of every month."],
+[2,0,"She handles customer complaints.","Customer complaints are handled by her."],
+[2,0,"He checks emails first thing in the morning.","Emails are checked first thing in the morning."],
+[2,0,"The team reviews the project progress weekly.","The project progress is reviewed weekly."],
+[2,0,"She trains new employees.","New employees are trained by her."],
+[2,0,"He organizes the files alphabetically.","The files are organized alphabetically."],
+[2,1,"The boss approved the budget yesterday.","The budget was approved yesterday."],
+[2,1,"She completed the report on time.","The report was completed on time."],
+[2,1,"They hired three new engineers last month.","Three new engineers were hired last month."],
+[2,1,"He presented the proposal to the board.","The proposal was presented to the board."],
+[2,1,"The company launched a new product last week.","A new product was launched last week."],
+[2,1,"She scheduled the meeting for Thursday.","The meeting was scheduled for Thursday."],
+[2,1,"He signed the contract yesterday.","The contract was signed yesterday."],
+[2,1,"They promoted her to team leader.","She was promoted to team leader."],
+[2,1,"The client rejected the first design.","The first design was rejected by the client."],
+[2,1,"He submitted his resignation last Friday.","His resignation was submitted last Friday."],
+[2,2,"She will send the invoice tomorrow.","The invoice will be sent tomorrow."],
+[2,2,"They will announce the results next week.","The results will be announced next week."],
+[2,2,"The company will open a new branch soon.","A new branch will be opened soon."],
+[2,2,"He will finish the project by Friday.","The project will be finished by Friday."],
+[2,2,"She will arrange a conference call.","A conference call will be arranged."],
+[2,3,"She is preparing the quarterly report.","The quarterly report is being prepared."],
+[2,3,"They are interviewing candidates today.","Candidates are being interviewed today."],
+[2,3,"He is updating the database right now.","The database is being updated right now."],
+[2,3,"The team is developing a new strategy.","A new strategy is being developed."],
+[2,3,"She is reviewing the documents carefully.","The documents are being reviewed carefully."],
+[2,4,"He was writing the report when the power went off.","The report was being written when the power went off."],
+[2,4,"They were discussing the plan all morning.","The plan was being discussed all morning."],
+[2,4,"She was handling the negotiations.","The negotiations were being handled by her."],
+[2,5,"She has already emailed the client.","The client has already been emailed."],
+[2,5,"He has completed the annual audit.","The annual audit has been completed."],
+[2,5,"They have approved the new policy.","The new policy has been approved."],
+[2,5,"The company has increased salaries this year.","Salaries have been increased this year."],
+[2,5,"She has submitted her application.","Her application has been submitted."],
+[2,6,"He had reviewed all the files before the meeting.","All the files had been reviewed before the meeting."],
+[2,6,"She had prepared the presentation before the deadline.","The presentation had been prepared before the deadline."],
+[2,6,"They had discussed the issue before the manager arrived.","The issue had been discussed before the manager arrived."],
+[2,7,"You should submit the form by Friday.","The form should be submitted by Friday."],
+[2,7,"The manager can approve your leave request.","Your leave request can be approved by the manager."],
+[2,7,"They must complete the training by next month.","The training must be completed by next month."],
+[2,7,"She could handle more responsibilities.","More responsibilities could be handled by her."],
+[2,7,"We may postpone the meeting to next week.","The meeting may be postponed to next week."],
+[2,7,"He must file the tax returns before March.","The tax returns must be filed before March."],
+[2,7,"They should update the software regularly.","The software should be updated regularly."],
+[2,7,"She can delegate the work to her team.","The work can be delegated to her team."],
+[3,0,"The teacher explains the lesson clearly.","The lesson is explained clearly."],
+[3,0,"Students write essays every week.","Essays are written every week."],
+[3,0,"She reads books from the library.","Books are read from the library."],
+[3,0,"He teaches mathematics to grade five.","Mathematics is taught to grade five."],
+[3,0,"The school conducts exams twice a year.","Exams are conducted twice a year."],
+[3,0,"They study science in the laboratory.","Science is studied in the laboratory."],
+[3,0,"The principal checks the attendance daily.","The attendance is checked daily."],
+[3,0,"She memorizes vocabulary words every day.","Vocabulary words are memorized every day."],
+[3,0,"He solves math problems at home.","Math problems are solved at home."],
+[3,0,"The college offers many courses.","Many courses are offered by the college."],
+[3,1,"The teacher corrected the homework yesterday.","The homework was corrected yesterday."],
+[3,1,"She passed the entrance exam last year.","The entrance exam was passed by her last year."],
+[3,1,"He submitted his thesis on time.","His thesis was submitted on time."],
+[3,1,"They organized a science fair last month.","A science fair was organized last month."],
+[3,1,"The university awarded her a scholarship.","She was awarded a scholarship by the university."],
+[3,1,"He failed the driving test twice.","The driving test was failed twice."],
+[3,1,"She delivered an impressive speech at the ceremony.","An impressive speech was delivered at the ceremony."],
+[3,1,"They cancelled classes due to rain.","Classes were cancelled due to rain."],
+[3,1,"The committee selected the best project.","The best project was selected by the committee."],
+[3,1,"He drew a map for the geography class.","A map was drawn for the geography class."],
+[3,2,"She will take the exam next Monday.","The exam will be taken next Monday."],
+[3,2,"They will announce the results on Friday.","The results will be announced on Friday."],
+[3,2,"The school will introduce new subjects next year.","New subjects will be introduced next year."],
+[3,2,"He will complete his degree in two years.","His degree will be completed in two years."],
+[3,2,"She will present her research at the conference.","Her research will be presented at the conference."],
+[3,3,"The students are writing their final exams.","The final exams are being written by the students."],
+[3,3,"She is learning French this semester.","French is being learned this semester."],
+[3,3,"He is preparing for the entrance test.","The entrance test is being prepared for."],
+[3,3,"They are conducting a survey on campus.","A survey is being conducted on campus."],
+[3,3,"The professor is grading the papers.","The papers are being graded."],
+[3,4,"She was reading a novel when the bell rang.","A novel was being read when the bell rang."],
+[3,4,"He was teaching history during the last period.","History was being taught during the last period."],
+[3,4,"They were discussing the assignment all afternoon.","The assignment was being discussed all afternoon."],
+[3,5,"She has finished all her assignments.","All her assignments have been finished."],
+[3,5,"He has read the entire textbook.","The entire textbook has been read."],
+[3,5,"They have elected a new class representative.","A new class representative has been elected."],
+[3,5,"The teacher has explained the chapter thoroughly.","The chapter has been explained thoroughly."],
+[3,5,"She has scored the highest marks in the class.","The highest marks have been scored by her."],
+[3,6,"He had studied the topic before the teacher explained it.","The topic had been studied before the teacher explained it."],
+[3,6,"She had completed the project before the deadline.","The project had been completed before the deadline."],
+[3,6,"They had revised all the chapters before the exam.","All the chapters had been revised before the exam."],
+[3,7,"Students should complete the homework on time.","The homework should be completed on time."],
+[3,7,"She can speak three languages fluently.","Three languages can be spoken fluently by her."],
+[3,7,"They must follow the school rules.","The school rules must be followed."],
+[3,7,"He may join the debate club this year.","The debate club may be joined this year."],
+[3,7,"The teacher should encourage creative thinking.","Creative thinking should be encouraged."],
+[3,7,"You can borrow books from the library.","Books can be borrowed from the library."],
+[3,7,"Students must wear the uniform.","The uniform must be worn by students."],
+[3,7,"She could answer all the questions.","All the questions could be answered by her."],
+[4,0,"She buys groceries every Saturday.","Groceries are bought every Saturday."],
+[4,0,"He compares prices before buying.","Prices are compared before buying."],
+[4,0,"They sell fresh fruits at this shop.","Fresh fruits are sold at this shop."],
+[4,0,"She uses coupons to save money.","Coupons are used to save money."],
+[4,0,"He pays the bill with a credit card.","The bill is paid with a credit card."],
+[4,0,"The store offers discounts on weekends.","Discounts are offered on weekends."],
+[4,0,"She checks the expiry date on every product.","The expiry date is checked on every product."],
+[4,0,"He carries reusable bags to the market.","Reusable bags are carried to the market."],
+[4,0,"They deliver orders within two days.","Orders are delivered within two days."],
+[4,0,"She counts the change carefully.","The change is counted carefully."],
+[4,1,"He bought a new phone yesterday.","A new phone was bought yesterday."],
+[4,1,"She ordered a dress online last week.","A dress was ordered online last week."],
+[4,1,"They returned the defective product.","The defective product was returned."],
+[4,1,"He paid cash for the groceries.","Cash was paid for the groceries."],
+[4,1,"She selected the best quality fabric.","The best quality fabric was selected."],
+[4,1,"The shop gave a ten percent discount.","A ten percent discount was given by the shop."],
+[4,1,"He exchanged the wrong-sized shoes.","The wrong-sized shoes were exchanged."],
+[4,1,"She packed all the items in a bag.","All the items were packed in a bag."],
+[4,1,"They opened a new store downtown.","A new store was opened downtown."],
+[4,1,"He bargained with the shopkeeper for a lower price.","A lower price was bargained for with the shopkeeper."],
+[4,2,"She will buy a gift for her friend.","A gift will be bought for her friend."],
+[4,2,"They will launch a sale next month.","A sale will be launched next month."],
+[4,2,"He will return the faulty item tomorrow.","The faulty item will be returned tomorrow."],
+[4,2,"She will order the supplies online.","The supplies will be ordered online."],
+[4,2,"The mall will close early on holidays.","The mall will be closed early on holidays."],
+[4,3,"She is trying on a new jacket.","A new jacket is being tried on."],
+[4,3,"He is scanning the barcode at the counter.","The barcode is being scanned at the counter."],
+[4,3,"They are comparing different brands.","Different brands are being compared."],
+[4,3,"She is wrapping the gift carefully.","The gift is being wrapped carefully."],
+[4,3,"He is loading the groceries into the car.","The groceries are being loaded into the car."],
+[4,4,"She was choosing a birthday cake when I called.","A birthday cake was being chosen when I called."],
+[4,4,"He was counting the money at the register.","The money was being counted at the register."],
+[4,4,"They were arranging products on the shelf.","Products were being arranged on the shelf."],
+[4,5,"She has already placed the order.","The order has already been placed."],
+[4,5,"He has received the delivery.","The delivery has been received."],
+[4,5,"They have restocked the shelves.","The shelves have been restocked."],
+[4,5,"She has checked all the items on the list.","All the items on the list have been checked."],
+[4,5,"He has paid the full amount.","The full amount has been paid."],
+[4,6,"She had purchased the tickets before the price increased.","The tickets had been purchased before the price increased."],
+[4,6,"He had returned the parcel before the refund was processed.","The parcel had been returned before the refund was processed."],
+[4,6,"They had sold all the stock before the weekend.","All the stock had been sold before the weekend."],
+[4,7,"You should keep the receipt.","The receipt should be kept."],
+[4,7,"She can exchange the product within seven days.","The product can be exchanged within seven days."],
+[4,7,"They must check the quality before selling.","The quality must be checked before selling."],
+[4,7,"He may order it online instead.","It may be ordered online instead."],
+[4,7,"We should compare prices before buying.","Prices should be compared before buying."],
+[4,7,"You can pay by card or cash.","Payment can be made by card or cash."],
+[4,7,"She could find better deals at the outlet.","Better deals could be found at the outlet."],
+[5,0,"She books flight tickets online.","Flight tickets are booked online."],
+[5,0,"He packs his suitcase the night before.","His suitcase is packed the night before."],
+[5,0,"They visit their grandparents every summer.","Their grandparents are visited every summer."],
+[5,0,"She carries a passport for international trips.","A passport is carried for international trips."],
+[5,0,"He drives carefully on highways.","The car is driven carefully on highways."],
+[5,0,"The airline checks baggage at the counter.","Baggage is checked at the counter."],
+[5,0,"They guide tourists around the city.","Tourists are guided around the city."],
+[5,0,"She takes photos at every destination.","Photos are taken at every destination."],
+[5,1,"He booked a hotel room in advance.","A hotel room was booked in advance."],
+[5,1,"She visited Paris last summer.","Paris was visited last summer."],
+[5,1,"They cancelled the trip due to bad weather.","The trip was cancelled due to bad weather."],
+[5,1,"He lost his luggage at the airport.","His luggage was lost at the airport."],
+[5,1,"She bought souvenirs for her family.","Souvenirs were bought for her family."],
+[5,1,"They explored the old town on foot.","The old town was explored on foot."],
+[5,1,"He missed the train by five minutes.","The train was missed by five minutes."],
+[5,1,"She exchanged money at the airport.","Money was exchanged at the airport."],
+[5,1,"The pilot landed the plane safely.","The plane was landed safely."],
+[5,1,"They delayed the flight by two hours.","The flight was delayed by two hours."],
+[5,2,"She will catch the early morning bus.","The early morning bus will be caught."],
+[5,2,"They will visit Japan next year.","Japan will be visited next year."],
+[5,2,"He will rent a car at the airport.","A car will be rented at the airport."],
+[5,2,"She will extend her visa next month.","Her visa will be extended next month."],
+[5,2,"They will organize a group tour.","A group tour will be organized."],
+[5,3,"She is packing her bags for the trip.","Her bags are being packed for the trip."],
+[5,3,"He is boarding the plane right now.","The plane is being boarded right now."],
+[5,3,"They are exploring the local markets.","The local markets are being explored."],
+[5,3,"She is checking in at the hotel.","The check-in is being done at the hotel."],
+[5,3,"He is photographing the sunset.","The sunset is being photographed."],
+[5,4,"She was waiting for the bus when it started raining.","The bus was being waited for when it started raining."],
+[5,4,"He was driving through the mountains all day.","The mountains were being driven through all day."],
+[5,4,"They were planning the itinerary last night.","The itinerary was being planned last night."],
+[5,5,"She has already booked the return ticket.","The return ticket has already been booked."],
+[5,5,"He has visited ten countries so far.","Ten countries have been visited so far."],
+[5,5,"They have confirmed the hotel reservation.","The hotel reservation has been confirmed."],
+[5,5,"She has packed all the necessary items.","All the necessary items have been packed."],
+[5,5,"He has renewed his passport recently.","His passport has been renewed recently."],
+[5,6,"She had booked the flight before the prices went up.","The flight had been booked before the prices went up."],
+[5,6,"He had checked in before the rush began.","The check-in had been done before the rush began."],
+[5,6,"They had explored the city before the tour started.","The city had been explored before the tour started."],
+[5,7,"You should carry a first-aid kit while travelling.","A first-aid kit should be carried while travelling."],
+[5,7,"She can speak the local language.","The local language can be spoken by her."],
+[5,7,"He must show his ID at the border.","His ID must be shown at the border."],
+[5,7,"They may delay the departure.","The departure may be delayed."],
+[5,7,"We should book hotels in advance.","Hotels should be booked in advance."],
+[5,7,"You can track your flight status online.","Flight status can be tracked online."],
+[5,7,"She must declare valuable items at customs.","Valuable items must be declared at customs."],
+[5,0,"The travel agent arranges tours for groups.","Tours are arranged for groups by the travel agent."],
+[5,0,"He collects stamps in his passport.","Stamps are collected in his passport."],
+[5,1,"She tipped the taxi driver generously.","The taxi driver was tipped generously."],
+[6,0,"The doctor examines patients every day.","Patients are examined every day."],
+[6,0,"She takes her medicine after breakfast.","Her medicine is taken after breakfast."],
+[6,0,"He exercises for thirty minutes daily.","Exercise is done for thirty minutes daily."],
+[6,0,"The nurse checks blood pressure regularly.","Blood pressure is checked regularly."],
+[6,0,"She drinks eight glasses of water a day.","Eight glasses of water are drunk a day."],
+[6,0,"He avoids junk food for health reasons.","Junk food is avoided for health reasons."],
+[6,0,"The hospital treats hundreds of patients daily.","Hundreds of patients are treated daily."],
+[6,0,"She wears sunscreen before going outside.","Sunscreen is worn before going outside."],
+[6,0,"He stretches his muscles before running.","His muscles are stretched before running."],
+[6,1,"The doctor prescribed antibiotics yesterday.","Antibiotics were prescribed yesterday."],
+[6,1,"She broke her arm during the fall.","Her arm was broken during the fall."],
+[6,1,"They performed the surgery successfully.","The surgery was performed successfully."],
+[6,1,"He took painkillers for the headache.","Painkillers were taken for the headache."],
+[6,1,"She visited the dentist last week.","The dentist was visited last week."],
+[6,1,"The paramedics rushed him to the hospital.","He was rushed to the hospital by the paramedics."],
+[6,1,"He bandaged the wound immediately.","The wound was bandaged immediately."],
+[6,1,"She completed her blood test this morning.","Her blood test was completed this morning."],
+[6,1,"They diagnosed the illness quickly.","The illness was diagnosed quickly."],
+[6,1,"He donated blood at the camp.","Blood was donated at the camp."],
+[6,2,"She will schedule a check-up next week.","A check-up will be scheduled next week."],
+[6,2,"The doctor will examine the patient tomorrow.","The patient will be examined tomorrow."],
+[6,2,"They will vaccinate all the children this month.","All the children will be vaccinated this month."],
+[6,2,"He will start physiotherapy soon.","Physiotherapy will be started soon."],
+[6,2,"She will monitor her diet carefully.","Her diet will be monitored carefully."],
+[6,3,"The doctor is checking the X-ray report.","The X-ray report is being checked."],
+[6,3,"She is applying ointment on the wound.","Ointment is being applied on the wound."],
+[6,3,"They are conducting a health survey.","A health survey is being conducted."],
+[6,3,"He is recovering from the surgery.","Recovery from the surgery is being made."],
+[6,3,"The nurse is preparing the injection.","The injection is being prepared."],
+[6,4,"She was doing yoga when she felt dizzy.","Yoga was being done when she felt dizzy."],
+[6,4,"He was lifting weights when he pulled a muscle.","Weights were being lifted when he pulled a muscle."],
+[6,4,"They were treating the patient all night.","The patient was being treated all night."],
+[6,5,"She has recovered from the flu.","Recovery from the flu has been made."],
+[6,5,"He has taken all his medicines today.","All his medicines have been taken today."],
+[6,5,"They have completed the vaccination drive.","The vaccination drive has been completed."],
+[6,5,"The doctor has advised rest for a week.","Rest for a week has been advised by the doctor."],
+[6,5,"She has improved her fitness level.","Her fitness level has been improved."],
+[6,6,"He had taken the medicine before the pain worsened.","The medicine had been taken before the pain worsened."],
+[6,6,"She had completed her treatment before the follow-up.","Her treatment had been completed before the follow-up."],
+[6,6,"They had tested all the samples before noon.","All the samples had been tested before noon."],
+[6,7,"You should consult a doctor immediately.","A doctor should be consulted immediately."],
+[6,7,"She must take her vitamins daily.","Her vitamins must be taken daily."],
+[6,7,"He can lift heavier weights now.","Heavier weights can be lifted now."],
+[6,7,"They should maintain a balanced diet.","A balanced diet should be maintained."],
+[6,7,"You must wear a mask in the hospital.","A mask must be worn in the hospital."],
+[6,7,"She may need another blood test.","Another blood test may be needed."],
+[6,7,"He could feel the improvement after therapy.","The improvement could be felt after therapy."],
+[6,0,"They conduct free health camps every month.","Free health camps are conducted every month."],
+[7,0,"She updates her phone software regularly.","Phone software is updated regularly."],
+[7,0,"He designs websites for small businesses.","Websites are designed for small businesses."],
+[7,0,"They develop mobile applications.","Mobile applications are developed."],
+[7,0,"She backs up important files on the cloud.","Important files are backed up on the cloud."],
+[7,0,"He installs antivirus software on every computer.","Antivirus software is installed on every computer."],
+[7,0,"The company releases updates every month.","Updates are released every month."],
+[7,0,"She charges her laptop every night.","Her laptop is charged every night."],
+[7,0,"He uses a VPN for online security.","A VPN is used for online security."],
+[7,0,"They test the application before launch.","The application is tested before launch."],
+[7,0,"She codes in Python and JavaScript.","Python and JavaScript are used for coding."],
+[7,1,"He fixed the broken screen yesterday.","The broken screen was fixed yesterday."],
+[7,1,"She downloaded the new update last night.","The new update was downloaded last night."],
+[7,1,"They launched the website last month.","The website was launched last month."],
+[7,1,"He deleted all the spam emails.","All the spam emails were deleted."],
+[7,1,"She reset the password after the breach.","The password was reset after the breach."],
+[7,1,"The engineer repaired the server quickly.","The server was repaired quickly."],
+[7,1,"He connected the printer to the network.","The printer was connected to the network."],
+[7,1,"She uploaded the photos to the cloud.","The photos were uploaded to the cloud."],
+[7,1,"They resolved the technical issue within an hour.","The technical issue was resolved within an hour."],
+[7,1,"He programmed the robot to sort packages.","The robot was programmed to sort packages."],
+[7,2,"She will upgrade her laptop next month.","Her laptop will be upgraded next month."],
+[7,2,"They will release the new version on Monday.","The new version will be released on Monday."],
+[7,2,"He will install the new software tomorrow.","The new software will be installed tomorrow."],
+[7,2,"She will design the user interface this week.","The user interface will be designed this week."],
+[7,2,"They will replace the old servers soon.","The old servers will be replaced soon."],
+[7,3,"She is debugging the code right now.","The code is being debugged right now."],
+[7,3,"He is setting up the new router.","The new router is being set up."],
+[7,3,"They are testing the beta version.","The beta version is being tested."],
+[7,3,"She is creating a backup of all data.","A backup of all data is being created."],
+[7,3,"He is configuring the firewall settings.","The firewall settings are being configured."],
+[7,4,"She was typing the code when the system crashed.","The code was being typed when the system crashed."],
+[7,4,"He was installing updates when the power went off.","Updates were being installed when the power went off."],
+[7,4,"They were developing the app all week.","The app was being developed all week."],
+[7,5,"She has completed the coding challenge.","The coding challenge has been completed."],
+[7,5,"He has fixed the bug in the software.","The bug in the software has been fixed."],
+[7,5,"They have deployed the application to the server.","The application has been deployed to the server."],
+[7,5,"She has encrypted all sensitive data.","All sensitive data has been encrypted."],
+[7,5,"He has configured the email client.","The email client has been configured."],
+[7,6,"She had saved the document before the crash.","The document had been saved before the crash."],
+[7,6,"He had backed up the files before formatting.","The files had been backed up before formatting."],
+[7,6,"They had tested the feature before the release.","The feature had been tested before the release."],
+[7,7,"You should restart your computer regularly.","Your computer should be restarted regularly."],
+[7,7,"She can build a website in a day.","A website can be built in a day."],
+[7,7,"He must change his password every three months.","His password must be changed every three months."],
+[7,7,"They should update the antivirus software.","The antivirus software should be updated."],
+[7,7,"You can download the app from the store.","The app can be downloaded from the store."],
+[7,7,"She may need to reinstall the operating system.","The operating system may need to be reinstalled."],
+[7,7,"He could recover the deleted files.","The deleted files could be recovered."],
+[8,0,"She sweeps the floor every morning.","The floor is swept every morning."],
+[8,0,"He dusts the furniture on weekends.","The furniture is dusted on weekends."],
+[8,0,"They mop the tiles after sweeping.","The tiles are mopped after sweeping."],
+[8,0,"She arranges the cushions on the sofa.","The cushions are arranged on the sofa."],
+[8,0,"He empties the trash bin daily.","The trash bin is emptied daily."],
+[8,0,"She wipes the kitchen counter after cooking.","The kitchen counter is wiped after cooking."],
+[8,0,"He repairs broken things around the house.","Broken things around the house are repaired."],
+[8,0,"They organize the closet every month.","The closet is organized every month."],
+[8,0,"She cleans the windows twice a month.","The windows are cleaned twice a month."],
+[8,0,"He mows the lawn on Saturdays.","The lawn is mowed on Saturdays."],
+[8,1,"She vacuumed the carpet yesterday.","The carpet was vacuumed yesterday."],
+[8,1,"He painted the bedroom walls last week.","The bedroom walls were painted last week."],
+[8,1,"They fixed the leaking tap.","The leaking tap was fixed."],
+[8,1,"She replaced the old curtains.","The old curtains were replaced."],
+[8,1,"He assembled the new bookshelf.","The new bookshelf was assembled."],
+[8,1,"They repaired the broken fence.","The broken fence was repaired."],
+[8,1,"She scrubbed the bathroom tiles.","The bathroom tiles were scrubbed."],
+[8,1,"He polished the wooden floor.","The wooden floor was polished."],
+[8,1,"They installed a new air conditioner.","A new air conditioner was installed."],
+[8,1,"She rearranged all the furniture.","All the furniture was rearranged."],
+[8,2,"He will paint the living room next week.","The living room will be painted next week."],
+[8,2,"She will hang the new curtains tomorrow.","The new curtains will be hung tomorrow."],
+[8,2,"They will renovate the kitchen this year.","The kitchen will be renovated this year."],
+[8,2,"He will replace the broken tiles.","The broken tiles will be replaced."],
+[8,2,"She will clean the attic this weekend.","The attic will be cleaned this weekend."],
+[8,3,"She is scrubbing the floor right now.","The floor is being scrubbed right now."],
+[8,3,"He is fixing the shelf in the garage.","The shelf in the garage is being fixed."],
+[8,3,"They are decorating the house for the festival.","The house is being decorated for the festival."],
+[8,3,"She is washing the windows.","The windows are being washed."],
+[8,3,"He is assembling a new desk.","A new desk is being assembled."],
+[8,4,"She was dusting the shelves when the doorbell rang.","The shelves were being dusted when the doorbell rang."],
+[8,4,"He was repairing the roof all afternoon.","The roof was being repaired all afternoon."],
+[8,4,"They were cleaning the garage when it started raining.","The garage was being cleaned when it started raining."],
+[8,5,"She has already cleaned the entire house.","The entire house has already been cleaned."],
+[8,5,"He has replaced all the light bulbs.","All the light bulbs have been replaced."],
+[8,5,"They have organized the storeroom.","The storeroom has been organized."],
+[8,5,"She has ironed all the bedsheets.","All the bedsheets have been ironed."],
+[8,5,"He has fixed the dripping faucet.","The dripping faucet has been fixed."],
+[8,6,"She had finished cleaning before the guests arrived.","The cleaning had been finished before the guests arrived."],
+[8,6,"He had repaired the door before winter.","The door had been repaired before winter."],
+[8,6,"They had decorated the hall before the party.","The hall had been decorated before the party."],
+[8,7,"You should clean the air filter monthly.","The air filter should be cleaned monthly."],
+[8,7,"She can organize the pantry in an hour.","The pantry can be organized in an hour."],
+[8,7,"He must fix the broken lock.","The broken lock must be fixed."],
+[8,7,"They should repaint the exterior walls.","The exterior walls should be repainted."],
+[8,7,"You can rearrange the living room easily.","The living room can be rearranged easily."],
+[8,7,"She must dispose of old newspapers.","Old newspapers must be disposed of."],
+[8,7,"He could install the shelves himself.","The shelves could be installed by him."],
+[9,0,"She calls her parents every evening.","Her parents are called every evening."],
+[9,0,"He helps his children with homework.","His children are helped with homework."],
+[9,0,"They visit their relatives on festivals.","Their relatives are visited on festivals."],
+[9,0,"She takes care of her elderly mother.","Her elderly mother is taken care of."],
+[9,0,"He drives his kids to school daily.","His kids are driven to school daily."],
+[9,0,"She teaches her daughter to paint.","Her daughter is taught to paint."],
+[9,0,"He reads bedtime stories to his son.","Bedtime stories are read to his son."],
+[9,0,"They celebrate birthdays together.","Birthdays are celebrated together."],
+[9,0,"She hugs her children every morning.","Her children are hugged every morning."],
+[9,0,"He supports his family financially.","His family is supported financially."],
+[9,1,"She surprised her husband on his birthday.","Her husband was surprised on his birthday."],
+[9,1,"He invited all the relatives for dinner.","All the relatives were invited for dinner."],
+[9,1,"They adopted a puppy last month.","A puppy was adopted last month."],
+[9,1,"She comforted her crying baby.","Her crying baby was comforted."],
+[9,1,"He gifted his wife a necklace.","His wife was gifted a necklace."],
+[9,1,"They organized a family reunion last year.","A family reunion was organized last year."],
+[9,1,"She praised her son for his good grades.","Her son was praised for his good grades."],
+[9,1,"He named the baby after his grandfather.","The baby was named after his grandfather."],
+[9,1,"They shared old photographs at the gathering.","Old photographs were shared at the gathering."],
+[9,1,"She taught her nephew how to ride a bicycle.","Her nephew was taught how to ride a bicycle."],
+[9,2,"She will visit her in-laws next weekend.","Her in-laws will be visited next weekend."],
+[9,2,"He will take the family on a vacation.","The family will be taken on a vacation."],
+[9,2,"They will celebrate their anniversary next month.","Their anniversary will be celebrated next month."],
+[9,2,"She will throw a party for her daughter.","A party will be thrown for her daughter."],
+[9,2,"He will pick up his parents from the airport.","His parents will be picked up from the airport."],
+[9,3,"She is feeding the baby right now.","The baby is being fed right now."],
+[9,3,"He is helping his son with the project.","His son is being helped with the project."],
+[9,3,"They are planning a family trip.","A family trip is being planned."],
+[9,3,"She is preparing a gift for her mother.","A gift is being prepared for her mother."],
+[9,3,"He is teaching his daughter to swim.","His daughter is being taught to swim."],
+[9,4,"She was singing a lullaby when the baby fell asleep.","A lullaby was being sung when the baby fell asleep."],
+[9,4,"He was reading to his kids when the power went off.","A story was being read to the kids when the power went off."],
+[9,4,"They were decorating the house for the wedding.","The house was being decorated for the wedding."],
+[9,5,"She has raised three children on her own.","Three children have been raised by her on her own."],
+[9,5,"He has planned a surprise for his wife.","A surprise has been planned for his wife."],
+[9,5,"They have invited everyone to the baby shower.","Everyone has been invited to the baby shower."],
+[9,5,"She has spoken to her brother about the issue.","Her brother has been spoken to about the issue."],
+[9,5,"He has supported his sister throughout college.","His sister has been supported throughout college."],
+[9,6,"She had cooked a special meal before the guests arrived.","A special meal had been cooked before the guests arrived."],
+[9,6,"He had arranged the surprise before she came home.","The surprise had been arranged before she came home."],
+[9,6,"They had sent the invitations before the deadline.","The invitations had been sent before the deadline."],
+[9,7,"You should respect your elders.","Elders should be respected."],
+[9,7,"She can manage the household efficiently.","The household can be managed efficiently."],
+[9,7,"He must attend the family meeting.","The family meeting must be attended."],
+[9,7,"They should spend more time together.","More time should be spent together."],
+[9,7,"You can trust your parents with your problems.","Your parents can be trusted with your problems."],
+[9,7,"She may invite her cousins for the holiday.","Her cousins may be invited for the holiday."],
+[9,7,"He could comfort anyone with his words.","Anyone could be comforted by his words."],
+[10,0,"He plays cricket every Sunday.","Cricket is played every Sunday."],
+[10,0,"She practices tennis for two hours daily.","Tennis is practiced for two hours daily."],
+[10,0,"The coach trains the players every morning.","The players are trained every morning."],
+[10,0,"They watch football matches on TV.","Football matches are watched on TV."],
+[10,0,"She swims fifty laps in the pool.","Fifty laps are swum in the pool."],
+[10,0,"He kicks the ball very hard.","The ball is kicked very hard."],
+[10,0,"The referee blows the whistle at kickoff.","The whistle is blown at kickoff."],
+[10,0,"She scores goals regularly.","Goals are scored regularly."],
+[10,0,"He lifts weights at the gym.","Weights are lifted at the gym."],
+[10,0,"They play chess in the park.","Chess is played in the park."],
+[10,1,"He won the gold medal last year.","The gold medal was won last year."],
+[10,1,"She broke the national record.","The national record was broken."],
+[10,1,"They defeated the opposing team.","The opposing team was defeated."],
+[10,1,"The captain led the team to victory.","The team was led to victory by the captain."],
+[10,1,"He hit a six on the last ball.","A six was hit on the last ball."],
+[10,1,"She completed the marathon in four hours.","The marathon was completed in four hours."],
+[10,1,"The crowd cheered the winning team.","The winning team was cheered by the crowd."],
+[10,1,"He caught the ball near the boundary.","The ball was caught near the boundary."],
+[10,1,"She passed the ball to her teammate.","The ball was passed to her teammate."],
+[10,1,"They postponed the match due to rain.","The match was postponed due to rain."],
+[10,2,"She will join the swimming team next month.","The swimming team will be joined next month."],
+[10,2,"He will run the half-marathon in November.","The half-marathon will be run in November."],
+[10,2,"They will host the tournament this year.","The tournament will be hosted this year."],
+[10,2,"She will compete in the national championship.","The national championship will be competed in."],
+[10,2,"He will coach the junior team next season.","The junior team will be coached next season."],
+[10,3,"She is playing badminton with her friend.","Badminton is being played with her friend."],
+[10,3,"He is running on the track right now.","A run is being done on the track right now."],
+[10,3,"They are watching the live match.","The live match is being watched."],
+[10,3,"She is stretching before the game.","Stretching is being done before the game."],
+[10,3,"The team is practicing for the finals.","Practice is being done for the finals."],
+[10,4,"He was bowling when it started raining.","Bowling was being done when it started raining."],
+[10,4,"She was swimming when the alarm went off.","Swimming was being done when the alarm went off."],
+[10,4,"They were playing volleyball all afternoon.","Volleyball was being played all afternoon."],
+[10,5,"She has won three trophies this season.","Three trophies have been won this season."],
+[10,5,"He has completed the training programme.","The training programme has been completed."],
+[10,5,"They have selected the final team.","The final team has been selected."],
+[10,5,"She has improved her batting average.","Her batting average has been improved."],
+[10,5,"He has run five kilometres today.","Five kilometres have been run today."],
+[10,6,"She had warmed up before the match started.","The warm-up had been done before the match started."],
+[10,6,"He had scored twice before half-time.","Two goals had been scored before half-time."],
+[10,6,"They had practiced all week before the tournament.","Practice had been done all week before the tournament."],
+[10,7,"Players should follow the rules of the game.","The rules of the game should be followed."],
+[10,7,"She can run faster than anyone on the team.","No one on the team can be outrun by her."],
+[10,7,"He must attend every practice session.","Every practice session must be attended."],
+[10,7,"They may reschedule the match.","The match may be rescheduled."],
+[10,7,"You should warm up before exercising.","A warm-up should be done before exercising."],
+[10,7,"She could beat the school record.","The school record could be beaten by her."],
+[10,7,"He can play three different sports.","Three different sports can be played by him."],
+[11,0,"The sun heats the earth every day.","The earth is heated by the sun every day."],
+[11,0,"Rain fills the rivers during monsoon.","The rivers are filled by rain during monsoon."],
+[11,0,"Birds build nests in the trees.","Nests are built in the trees by birds."],
+[11,0,"The wind blows the leaves off the branches.","The leaves are blown off the branches by the wind."],
+[11,0,"Farmers grow rice in the paddy fields.","Rice is grown in the paddy fields."],
+[11,0,"Bees pollinate the flowers.","The flowers are pollinated by bees."],
+[11,0,"The river carries silt to the delta.","Silt is carried to the delta by the river."],
+[11,0,"Snow covers the mountain peaks in winter.","The mountain peaks are covered by snow in winter."],
+[11,0,"Waves shape the coastline over centuries.","The coastline is shaped by waves over centuries."],
+[11,0,"The gardener prunes the bushes regularly.","The bushes are pruned regularly."],
+[11,1,"The storm uprooted several trees last night.","Several trees were uprooted by the storm last night."],
+[11,1,"Lightning struck the old oak tree.","The old oak tree was struck by lightning."],
+[11,1,"The flood destroyed many homes.","Many homes were destroyed by the flood."],
+[11,1,"They planted fifty trees in the park.","Fifty trees were planted in the park."],
+[11,1,"The earthquake shook the entire region.","The entire region was shaken by the earthquake."],
+[11,1,"The volcano erupted and covered the sky with ash.","The sky was covered with ash by the erupting volcano."],
+[11,1,"She rescued the injured bird.","The injured bird was rescued."],
+[11,1,"The drought dried up the reservoir.","The reservoir was dried up by the drought."],
+[11,1,"He discovered a rare flower in the forest.","A rare flower was discovered in the forest."],
+[11,1,"They cleaned the beach after the festival.","The beach was cleaned after the festival."],
+[11,2,"The government will plant a million trees this year.","A million trees will be planted this year."],
+[11,2,"They will clean the river by next summer.","The river will be cleaned by next summer."],
+[11,2,"The council will protect the wetlands.","The wetlands will be protected."],
+[11,2,"She will document the local bird species.","The local bird species will be documented."],
+[11,2,"They will install solar panels on the farm.","Solar panels will be installed on the farm."],
+[11,3,"The snow is covering the roads right now.","The roads are being covered by snow right now."],
+[11,3,"The tide is eroding the cliff face.","The cliff face is being eroded by the tide."],
+[11,3,"They are planting saplings along the highway.","Saplings are being planted along the highway."],
+[11,3,"She is photographing the wildflowers.","The wildflowers are being photographed."],
+[11,3,"The fog is reducing visibility on the highway.","Visibility on the highway is being reduced by the fog."],
+[11,4,"The rain was flooding the streets all morning.","The streets were being flooded all morning."],
+[11,4,"The wind was shaking the windows during the storm.","The windows were being shaken by the wind during the storm."],
+[11,4,"They were tracking the hurricane closely.","The hurricane was being tracked closely."],
+[11,5,"The city has experienced heavy rainfall this month.","Heavy rainfall has been experienced this month."],
+[11,5,"They have protected the coral reef successfully.","The coral reef has been protected successfully."],
+[11,5,"She has collected hundreds of plant samples.","Hundreds of plant samples have been collected."],
+[11,5,"He has recorded the temperature changes for a year.","The temperature changes have been recorded for a year."],
+[11,5,"The forest has absorbed tons of carbon dioxide.","Tons of carbon dioxide have been absorbed by the forest."],
+[11,6,"The river had flooded the village before help arrived.","The village had been flooded before help arrived."],
+[11,6,"They had evacuated the town before the cyclone hit.","The town had been evacuated before the cyclone hit."],
+[11,6,"She had documented the species before they became extinct.","The species had been documented before they became extinct."],
+[11,7,"We should protect endangered species.","Endangered species should be protected."],
+[11,7,"People must reduce plastic waste.","Plastic waste must be reduced."],
+[11,7,"They can recycle paper and glass.","Paper and glass can be recycled."],
+[11,7,"She should plant more trees in the garden.","More trees should be planted in the garden."],
+[11,7,"He may discover new insect species.","New insect species may be discovered."],
+[11,7,"We must conserve water during summer.","Water must be conserved during summer."],
+[11,7,"They could restore the damaged ecosystem.","The damaged ecosystem could be restored."],
+[11,7,"The dam can control flooding downstream.","Flooding downstream can be controlled by the dam."],
+[11,0,"Sunlight nourishes the plants.","The plants are nourished by sunlight."],
+[12,0,"She sends emails to clients every day.","Emails are sent to clients every day."],
+[12,0,"He writes letters to his pen friend.","Letters are written to his pen friend."],
+[12,0,"They share news on social media.","News is shared on social media."],
+[12,0,"She calls her friends every weekend.","Her friends are called every weekend."],
+[12,0,"He posts updates on the company blog.","Updates are posted on the company blog."],
+[12,0,"The newspaper publishes articles daily.","Articles are published daily."],
+[12,0,"She translates documents from Hindi to English.","Documents are translated from Hindi to English."],
+[12,0,"He records podcasts every week.","Podcasts are recorded every week."],
+[12,0,"They broadcast the news at nine PM.","The news is broadcast at nine PM."],
+[12,0,"She edits the newsletter before sending it.","The newsletter is edited before sending."],
+[12,1,"He sent the message last night.","The message was sent last night."],
+[12,1,"She wrote a thank-you note.","A thank-you note was written."],
+[12,1,"They announced the news on television.","The news was announced on television."],
+[12,1,"He forwarded the email to the team.","The email was forwarded to the team."],
+[12,1,"She delivered the speech confidently.","The speech was delivered confidently."],
+[12,1,"They published the article online.","The article was published online."],
+[12,1,"He replied to all the messages.","All the messages were replied to."],
+[12,1,"She recorded the interview yesterday.","The interview was recorded yesterday."],
+[12,1,"They printed five hundred copies of the brochure.","Five hundred copies of the brochure were printed."],
+[12,1,"He shared the presentation with his colleagues.","The presentation was shared with his colleagues."],
+[12,2,"She will send the invitation by tomorrow.","The invitation will be sent by tomorrow."],
+[12,2,"He will announce the results on Friday.","The results will be announced on Friday."],
+[12,2,"They will publish the report next week.","The report will be published next week."],
+[12,2,"She will translate the contract into French.","The contract will be translated into French."],
+[12,2,"He will record the video message tonight.","The video message will be recorded tonight."],
+[12,3,"She is typing an email right now.","An email is being typed right now."],
+[12,3,"He is reading the comments on the post.","The comments on the post are being read."],
+[12,3,"They are discussing the proposal over the phone.","The proposal is being discussed over the phone."],
+[12,3,"She is editing the video for the channel.","The video is being edited for the channel."],
+[12,3,"He is writing a blog post about travel.","A blog post about travel is being written."],
+[12,4,"She was reading the letter when the phone rang.","The letter was being read when the phone rang."],
+[12,4,"He was recording the podcast all afternoon.","The podcast was being recorded all afternoon."],
+[12,4,"They were printing the documents when the printer jammed.","The documents were being printed when the printer jammed."],
+[12,5,"She has already replied to the email.","The email has already been replied to."],
+[12,5,"He has sent the package by courier.","The package has been sent by courier."],
+[12,5,"They have released the press statement.","The press statement has been released."],
+[12,5,"She has written three articles this week.","Three articles have been written this week."],
+[12,5,"He has uploaded the video to the platform.","The video has been uploaded to the platform."],
+[12,6,"She had called him before the meeting started.","He had been called before the meeting started."],
+[12,6,"He had composed the message before the deadline.","The message had been composed before the deadline."],
+[12,6,"They had distributed the flyers before the event.","The flyers had been distributed before the event."],
+[12,7,"You should proofread the email before sending.","The email should be proofread before sending."],
+[12,7,"She can speak four languages fluently.","Four languages can be spoken fluently by her."],
+[12,7,"He must respond to the client by tonight.","The client must be responded to by tonight."],
+[12,7,"They should share the information with all departments.","The information should be shared with all departments."],
+[12,7,"You can leave a voicemail after the tone.","A voicemail can be left after the tone."],
+[12,7,"She may postpone the broadcast.","The broadcast may be postponed."],
+[12,7,"He could explain the concept very simply.","The concept could be explained very simply."],
+[13,0,"The chef prepares fresh meals every day.","Fresh meals are prepared every day."],
+[13,0,"She orders coffee with breakfast.","Coffee is ordered with breakfast."],
+[13,0,"He eats lunch at the office canteen.","Lunch is eaten at the office canteen."],
+[13,0,"They serve dinner at eight PM.","Dinner is served at eight PM."],
+[13,0,"She sets the table before every meal.","The table is set before every meal."],
+[13,0,"He tips the waiter after eating.","The waiter is tipped after eating."],
+[13,0,"The restaurant offers a buffet on Sundays.","A buffet is offered on Sundays."],
+[13,0,"She packs lunch for her children.","Lunch is packed for her children."],
+[13,0,"He tastes the food before adding salt.","The food is tasted before adding salt."],
+[13,0,"They reserve a table in advance.","A table is reserved in advance."],
+[13,1,"She ordered a pizza for delivery.","A pizza was ordered for delivery."],
+[13,1,"He cooked pasta for dinner last night.","Pasta was cooked for dinner last night."],
+[13,1,"They tried the new restaurant downtown.","The new restaurant downtown was tried."],
+[13,1,"She served tea to the guests.","Tea was served to the guests."],
+[13,1,"He finished his plate in five minutes.","His plate was finished in five minutes."],
+[13,1,"They catered the wedding reception.","The wedding reception was catered."],
+[13,1,"She prepared a three-course meal.","A three-course meal was prepared."],
+[13,1,"He grilled burgers at the picnic.","Burgers were grilled at the picnic."],
+[13,1,"They opened a new cafe last week.","A new cafe was opened last week."],
+[13,1,"She tasted the wine before ordering a bottle.","The wine was tasted before ordering a bottle."],
+[13,2,"She will book a table for tonight.","A table will be booked for tonight."],
+[13,2,"He will prepare a special dish for the anniversary.","A special dish will be prepared for the anniversary."],
+[13,2,"They will host a dinner party on Saturday.","A dinner party will be hosted on Saturday."],
+[13,2,"She will try the new sushi place tomorrow.","The new sushi place will be tried tomorrow."],
+[13,2,"He will order takeaway for the team.","Takeaway will be ordered for the team."],
+[13,3,"She is pouring water into the glasses.","Water is being poured into the glasses."],
+[13,3,"He is carving the roast turkey.","The roast turkey is being carved."],
+[13,3,"They are serving dessert now.","Dessert is being served now."],
+[13,3,"She is tasting the soup for seasoning.","The soup is being tasted for seasoning."],
+[13,3,"He is clearing the table after dinner.","The table is being cleared after dinner."],
+[13,4,"She was making smoothies when the blender broke.","Smoothies were being made when the blender broke."],
+[13,4,"He was grilling steaks when the rain started.","Steaks were being grilled when the rain started."],
+[13,4,"They were decorating the cake all evening.","The cake was being decorated all evening."],
+[13,5,"She has already ordered the food.","The food has already been ordered."],
+[13,5,"He has tasted every dish on the menu.","Every dish on the menu has been tasted."],
+[13,5,"They have reserved the private dining room.","The private dining room has been reserved."],
+[13,5,"She has prepared the appetizers.","The appetizers have been prepared."],
+[13,5,"He has cleared all the plates from the table.","All the plates have been cleared from the table."],
+[13,6,"She had set the table before the guests arrived.","The table had been set before the guests arrived."],
+[13,6,"He had tasted the dish before it was served.","The dish had been tasted before it was served."],
+[13,6,"They had finished eating before the show started.","Eating had been finished before the show started."],
+[13,7,"You should try the local cuisine.","The local cuisine should be tried."],
+[13,7,"She can prepare a meal for twenty people.","A meal for twenty people can be prepared."],
+[13,7,"He must avoid spicy food.","Spicy food must be avoided."],
+[13,7,"They should serve the food while it is hot.","The food should be served while it is hot."],
+[13,7,"You can customize your order.","Your order can be customized."],
+[13,7,"She may change the menu next month.","The menu may be changed next month."],
+[13,7,"He could eat three plates of biryani.","Three plates of biryani could be eaten by him."],
+[14,0,"She irons her clothes every morning.","Her clothes are ironed every morning."],
+[14,0,"He wears a suit to the office.","A suit is worn to the office."],
+[14,0,"They design clothes for young adults.","Clothes are designed for young adults."],
+[14,0,"She washes delicates by hand.","Delicates are washed by hand."],
+[14,0,"He polishes his shoes before going out.","His shoes are polished before going out."],
+[14,0,"The tailor stitches custom outfits.","Custom outfits are stitched by the tailor."],
+[14,0,"She chooses her outfit the night before.","Her outfit is chosen the night before."],
+[14,0,"He folds his clothes neatly.","His clothes are folded neatly."],
+[14,0,"They display the latest fashion in the store window.","The latest fashion is displayed in the store window."],
+[14,0,"She mends torn clothes herself.","Torn clothes are mended by her."],
+[14,1,"She bought a silk saree for the wedding.","A silk saree was bought for the wedding."],
+[14,1,"He wore a traditional kurta at the festival.","A traditional kurta was worn at the festival."],
+[14,1,"They launched a new clothing line last season.","A new clothing line was launched last season."],
+[14,1,"She altered the dress to fit perfectly.","The dress was altered to fit perfectly."],
+[14,1,"He donated his old clothes to charity.","His old clothes were donated to charity."],
+[14,1,"The designer showcased her collection at the fashion show.","Her collection was showcased at the fashion show."],
+[14,1,"She hemmed the trousers yesterday.","The trousers were hemmed yesterday."],
+[14,1,"He tried on five jackets before choosing one.","Five jackets were tried on before one was chosen."],
+[14,1,"They dyed the fabric a deep blue.","The fabric was dyed a deep blue."],
+[14,1,"She packed her winter clothes into boxes.","Her winter clothes were packed into boxes."],
+[14,2,"She will buy a new outfit for the party.","A new outfit will be bought for the party."],
+[14,2,"He will dry-clean his blazer tomorrow.","His blazer will be dry-cleaned tomorrow."],
+[14,2,"They will release the summer collection next month.","The summer collection will be released next month."],
+[14,2,"She will tailor the wedding dress herself.","The wedding dress will be tailored by her."],
+[14,2,"He will sort through his wardrobe this weekend.","His wardrobe will be sorted through this weekend."],
+[14,3,"She is trying on dresses at the boutique.","Dresses are being tried on at the boutique."],
+[14,3,"He is sewing a button on his shirt.","A button is being sewn on his shirt."],
+[14,3,"They are manufacturing eco-friendly clothing.","Eco-friendly clothing is being manufactured."],
+[14,3,"She is folding the laundry.","The laundry is being folded."],
+[14,3,"He is matching his tie with his shirt.","His tie is being matched with his shirt."],
+[14,4,"She was knitting a sweater when I visited.","A sweater was being knitted when I visited."],
+[14,4,"He was ironing his shirt for the meeting.","His shirt was being ironed for the meeting."],
+[14,4,"They were designing the new uniforms all week.","The new uniforms were being designed all week."],
+[14,5,"She has already washed all the winter clothes.","All the winter clothes have already been washed."],
+[14,5,"He has bought a new pair of shoes.","A new pair of shoes has been bought."],
+[14,5,"They have introduced organic cotton fabrics.","Organic cotton fabrics have been introduced."],
+[14,5,"She has stitched the costume for the play.","The costume for the play has been stitched."],
+[14,5,"He has organized his wardrobe by colour.","His wardrobe has been organized by colour."],
+[14,6,"She had ironed the outfit before the event.","The outfit had been ironed before the event."],
+[14,6,"He had packed his clothes before the trip.","His clothes had been packed before the trip."],
+[14,6,"They had finished the embroidery before the deadline.","The embroidery had been finished before the deadline."],
+[14,7,"You should wash dark clothes separately.","Dark clothes should be washed separately."],
+[14,7,"She can stitch a dress in two days.","A dress can be stitched in two days."],
+[14,7,"He must iron his uniform daily.","His uniform must be ironed daily."],
+[14,7,"They should store woollen clothes properly.","Woollen clothes should be stored properly."],
+[14,7,"You can return the item within thirty days.","The item can be returned within thirty days."],
+[14,7,"She may wear the red dress tonight.","The red dress may be worn tonight."],
+[14,7,"He could repair the torn jacket easily.","The torn jacket could be repaired easily."],
+[15,0,"She watches movies every Friday night.","Movies are watched every Friday night."],
+[15,0,"He plays the guitar after dinner.","The guitar is played after dinner."],
+[15,0,"They host a quiz night every month.","A quiz night is hosted every month."],
+[15,0,"She reads novels before bed.","Novels are read before bed."],
+[15,0,"He listens to music while commuting.","Music is listened to while commuting."],
+[15,0,"The theatre shows plays on weekends.","Plays are shown on weekends."],
+[15,0,"She paints landscapes in her free time.","Landscapes are painted in her free time."],
+[15,0,"He streams live matches online.","Live matches are streamed online."],
+[15,0,"They organize concerts in the park.","Concerts are organized in the park."],
+[15,0,"She collects vintage records.","Vintage records are collected."],
+[15,1,"He directed a short film last year.","A short film was directed last year."],
+[15,1,"She performed a beautiful dance at the show.","A beautiful dance was performed at the show."],
+[15,1,"They released the album worldwide.","The album was released worldwide."],
+[15,1,"He composed the music for the play.","The music for the play was composed."],
+[15,1,"She sang the national anthem at the event.","The national anthem was sung at the event."],
+[15,1,"They screened the documentary at the festival.","The documentary was screened at the festival."],
+[15,1,"He wrote the screenplay in three months.","The screenplay was written in three months."],
+[15,1,"She won the best actress award.","The best actress award was won by her."],
+[15,1,"They sold out all the tickets within an hour.","All the tickets were sold out within an hour."],
+[15,1,"He photographed the concert beautifully.","The concert was photographed beautifully."],
+[15,2,"She will perform at the music festival next week.","A performance will be given at the music festival next week."],
+[15,2,"They will release the sequel next year.","The sequel will be released next year."],
+[15,2,"He will audition for the lead role tomorrow.","An audition for the lead role will be done tomorrow."],
+[15,2,"She will exhibit her paintings in the gallery.","Her paintings will be exhibited in the gallery."],
+[15,2,"They will stream the show live online.","The show will be streamed live online."],
+[15,3,"She is practising the violin right now.","The violin is being practised right now."],
+[15,3,"He is filming a documentary.","A documentary is being filmed."],
+[15,3,"They are rehearsing for the play.","Rehearsals for the play are being done."],
+[15,3,"She is painting a portrait.","A portrait is being painted."],
+[15,3,"He is editing the music video.","The music video is being edited."],
+[15,4,"She was singing when the microphone stopped working.","A song was being sung when the microphone stopped working."],
+[15,4,"He was playing the drums during the power cut.","The drums were being played during the power cut."],
+[15,4,"They were shooting the final scene all day.","The final scene was being shot all day."],
+[15,5,"She has learned three instruments.","Three instruments have been learned."],
+[15,5,"He has directed five feature films.","Five feature films have been directed."],
+[15,5,"They have sold a million copies of the album.","A million copies of the album have been sold."],
+[15,5,"She has completed the painting.","The painting has been completed."],
+[15,5,"He has watched every episode of the series.","Every episode of the series has been watched."],
+[15,6,"She had memorized all her lines before the rehearsal.","All her lines had been memorized before the rehearsal."],
+[15,6,"He had composed the score before recording began.","The score had been composed before recording began."],
+[15,6,"They had set up the stage before the audience arrived.","The stage had been set up before the audience arrived."],
+[15,7,"You should listen to this podcast.","This podcast should be listened to."],
+[15,7,"She can play the piano beautifully.","The piano can be played beautifully by her."],
+[15,7,"He must finish the script by next week.","The script must be finished by next week."],
+[15,7,"They should promote the event on social media.","The event should be promoted on social media."],
+[15,7,"You can watch the movie on the streaming platform.","The movie can be watched on the streaming platform."],
+[15,7,"She may cancel the performance.","The performance may be cancelled."],
+[15,7,"He could write songs that moved people deeply.","Songs that moved people deeply could be written by him."],
+[16,0,"The government collects taxes from citizens.","Taxes are collected from citizens."],
+[16,0,"The police patrol the streets at night.","The streets are patrolled at night."],
+[16,0,"The court hears cases every day.","Cases are heard every day."],
+[16,0,"The parliament passes new laws regularly.","New laws are passed regularly."],
+[16,0,"The municipality maintains the public parks.","The public parks are maintained."],
+[16,0,"Voters elect representatives every five years.","Representatives are elected every five years."],
+[16,0,"The judge delivers the verdict after hearing arguments.","The verdict is delivered after hearing arguments."],
+[16,0,"The government funds public hospitals.","Public hospitals are funded by the government."],
+[16,0,"Officers enforce traffic rules strictly.","Traffic rules are enforced strictly."],
+[16,0,"The committee reviews applications weekly.","Applications are reviewed weekly."],
+[16,1,"The police arrested the suspect yesterday.","The suspect was arrested yesterday."],
+[16,1,"The court acquitted the defendant.","The defendant was acquitted by the court."],
+[16,1,"The government banned single-use plastic last year.","Single-use plastic was banned last year."],
+[16,1,"They passed the new education bill.","The new education bill was passed."],
+[16,1,"The mayor inaugurated the new bridge.","The new bridge was inaugurated by the mayor."],
+[16,1,"The jury found him guilty.","He was found guilty by the jury."],
+[16,1,"They amended the constitution in 2020.","The constitution was amended in 2020."],
+[16,1,"The officer issued a warning to the driver.","A warning was issued to the driver."],
+[16,1,"The council approved the building permit.","The building permit was approved by the council."],
+[16,1,"They investigated the fraud case thoroughly.","The fraud case was investigated thoroughly."],
+[16,2,"The government will introduce new reforms.","New reforms will be introduced."],
+[16,2,"They will announce the election dates next month.","The election dates will be announced next month."],
+[16,2,"The court will pronounce the judgment tomorrow.","The judgment will be pronounced tomorrow."],
+[16,2,"The state will build new highways.","New highways will be built."],
+[16,2,"They will implement the policy by next year.","The policy will be implemented by next year."],
+[16,3,"The police are investigating the robbery.","The robbery is being investigated."],
+[16,3,"The government is building affordable housing.","Affordable housing is being built."],
+[16,3,"They are debating the new tax bill.","The new tax bill is being debated."],
+[16,3,"The court is reviewing the appeal.","The appeal is being reviewed."],
+[16,3,"Officers are conducting a search operation.","A search operation is being conducted."],
+[16,4,"The police were questioning witnesses all morning.","Witnesses were being questioned all morning."],
+[16,4,"They were counting the votes through the night.","The votes were being counted through the night."],
+[16,4,"The lawyer was presenting the evidence.","The evidence was being presented."],
+[16,5,"The government has raised the minimum wage.","The minimum wage has been raised."],
+[16,5,"They have arrested the main suspect.","The main suspect has been arrested."],
+[16,5,"The court has dismissed the case.","The case has been dismissed."],
+[16,5,"The committee has approved the budget.","The budget has been approved."],
+[16,5,"They have enacted stricter pollution laws.","Stricter pollution laws have been enacted."],
+[16,6,"The judge had reviewed all the evidence before the verdict.","All the evidence had been reviewed before the verdict."],
+[16,6,"They had completed the investigation before filing charges.","The investigation had been completed before filing charges."],
+[16,6,"The council had debated the issue before voting.","The issue had been debated before voting."],
+[16,7,"Citizens should obey the law.","The law should be obeyed."],
+[16,7,"The court can overrule the previous judgment.","The previous judgment can be overruled."],
+[16,7,"They must protect the rights of every citizen.","The rights of every citizen must be protected."],
+[16,7,"The police should investigate every complaint.","Every complaint should be investigated."],
+[16,7,"The government may increase the pension amount.","The pension amount may be increased."],
+[16,7,"Authorities must ensure public safety.","Public safety must be ensured."],
+[16,7,"The parliament could amend this law.","This law could be amended by the parliament."],
+[17,0,"The company manufactures electronic goods.","Electronic goods are manufactured by the company."],
+[17,0,"She manages the marketing department.","The marketing department is managed by her."],
+[17,0,"They export textiles to thirty countries.","Textiles are exported to thirty countries."],
+[17,0,"He calculates the monthly revenue.","The monthly revenue is calculated."],
+[17,0,"The bank processes loan applications daily.","Loan applications are processed daily."],
+[17,0,"She audits the financial records every quarter.","The financial records are audited every quarter."],
+[17,0,"They negotiate contracts with suppliers.","Contracts are negotiated with suppliers."],
+[17,0,"The CEO approves the annual budget.","The annual budget is approved by the CEO."],
+[17,0,"He invests in mutual funds regularly.","Investments are made in mutual funds regularly."],
+[17,0,"The firm handles international clients.","International clients are handled by the firm."],
+[17,1,"The company earned record profits last year.","Record profits were earned last year."],
+[17,1,"She closed the deal with the Japanese firm.","The deal with the Japanese firm was closed."],
+[17,1,"They merged the two departments.","The two departments were merged."],
+[17,1,"He filed the tax returns before the deadline.","The tax returns were filed before the deadline."],
+[17,1,"The board rejected the proposed merger.","The proposed merger was rejected by the board."],
+[17,1,"She prepared the financial statement last month.","The financial statement was prepared last month."],
+[17,1,"They acquired a startup for ten million dollars.","A startup was acquired for ten million dollars."],
+[17,1,"He analysed the market trends carefully.","The market trends were analysed carefully."],
+[17,1,"The investors funded the new project.","The new project was funded by the investors."],
+[17,1,"She opened a savings account at the bank.","A savings account was opened at the bank."],
+[17,2,"They will expand the business to new markets.","The business will be expanded to new markets."],
+[17,2,"She will present the quarterly results on Monday.","The quarterly results will be presented on Monday."],
+[17,2,"The company will hire fifty new employees.","Fifty new employees will be hired."],
+[17,2,"He will submit the proposal by Friday.","The proposal will be submitted by Friday."],
+[17,2,"They will launch the product in six countries.","The product will be launched in six countries."],
+[17,3,"She is reviewing the balance sheet.","The balance sheet is being reviewed."],
+[17,3,"They are negotiating a new partnership.","A new partnership is being negotiated."],
+[17,3,"He is calculating the quarterly profits.","The quarterly profits are being calculated."],
+[17,3,"The team is preparing the pitch deck.","The pitch deck is being prepared."],
+[17,3,"She is drafting the business plan.","The business plan is being drafted."],
+[17,4,"He was presenting the report when the system crashed.","The report was being presented when the system crashed."],
+[17,4,"They were finalizing the contract all week.","The contract was being finalized all week."],
+[17,4,"She was auditing the accounts last month.","The accounts were being audited last month."],
+[17,5,"She has increased sales by twenty percent.","Sales have been increased by twenty percent."],
+[17,5,"He has signed the partnership agreement.","The partnership agreement has been signed."],
+[17,5,"They have reduced operating costs significantly.","Operating costs have been reduced significantly."],
+[17,5,"The company has opened three new branches.","Three new branches have been opened."],
+[17,5,"She has transferred the funds to the new account.","The funds have been transferred to the new account."],
+[17,6,"He had reviewed the contract before signing it.","The contract had been reviewed before signing."],
+[17,6,"She had completed the audit before the board meeting.","The audit had been completed before the board meeting."],
+[17,6,"They had closed the old account before opening a new one.","The old account had been closed before opening a new one."],
+[17,7,"The company should diversify its investments.","Investments should be diversified."],
+[17,7,"She can handle complex financial transactions.","Complex financial transactions can be handled by her."],
+[17,7,"He must file the annual report on time.","The annual report must be filed on time."],
+[17,7,"They should reduce unnecessary expenses.","Unnecessary expenses should be reduced."],
+[17,7,"You can open an account online.","An account can be opened online."],
+[17,7,"She may restructure the department.","The department may be restructured."],
+[17,7,"He could improve the company's profit margin.","The company's profit margin could be improved."],
+[18,0,"Scientists conduct experiments in the laboratory.","Experiments are conducted in the laboratory."],
+[18,0,"She observes the cells under a microscope.","The cells are observed under a microscope."],
+[18,0,"He measures the temperature of the solution.","The temperature of the solution is measured."],
+[18,0,"They analyse data from the satellite.","Data from the satellite is analysed."],
+[18,0,"The researcher records observations carefully.","Observations are recorded carefully."],
+[18,0,"She studies the behaviour of animals in the wild.","The behaviour of animals is studied in the wild."],
+[18,0,"He tests the hypothesis with controlled experiments.","The hypothesis is tested with controlled experiments."],
+[18,0,"They publish their findings in scientific journals.","Findings are published in scientific journals."],
+[18,0,"The lab assistant prepares the chemical solutions.","The chemical solutions are prepared."],
+[18,0,"She collects samples from the ocean floor.","Samples are collected from the ocean floor."],
+[18,1,"Newton discovered the law of gravity.","The law of gravity was discovered by Newton."],
+[18,1,"Marie Curie isolated radium.","Radium was isolated by Marie Curie."],
+[18,1,"They launched the satellite into orbit.","The satellite was launched into orbit."],
+[18,1,"He invented a new type of battery.","A new type of battery was invented."],
+[18,1,"She proved the theory with her experiment.","The theory was proved with her experiment."],
+[18,1,"They mapped the human genome.","The human genome was mapped."],
+[18,1,"He published his research paper last month.","His research paper was published last month."],
+[18,1,"She identified three new species of insects.","Three new species of insects were identified."],
+[18,1,"They developed a vaccine in record time.","A vaccine was developed in record time."],
+[18,1,"He built the prototype in his garage.","The prototype was built in his garage."],
+[18,2,"She will present her findings at the summit.","Her findings will be presented at the summit."],
+[18,2,"They will launch the Mars rover next year.","The Mars rover will be launched next year."],
+[18,2,"He will test the new formula tomorrow.","The new formula will be tested tomorrow."],
+[18,2,"She will publish the study next month.","The study will be published next month."],
+[18,2,"They will fund the research for five more years.","The research will be funded for five more years."],
+[18,3,"She is analysing the DNA samples.","The DNA samples are being analysed."],
+[18,3,"He is calibrating the telescope.","The telescope is being calibrated."],
+[18,3,"They are testing a new drug for diabetes.","A new drug for diabetes is being tested."],
+[18,3,"She is recording the experiment on video.","The experiment is being recorded on video."],
+[18,3,"He is measuring the radiation levels.","The radiation levels are being measured."],
+[18,4,"She was studying the rock formations when she found the fossil.","The rock formations were being studied when the fossil was found."],
+[18,4,"He was monitoring the seismic activity all night.","The seismic activity was being monitored all night."],
+[18,4,"They were conducting the trial when the results exceeded expectations.","The trial was being conducted when the results exceeded expectations."],
+[18,5,"She has discovered a new compound.","A new compound has been discovered."],
+[18,5,"He has completed the clinical trials.","The clinical trials have been completed."],
+[18,5,"They have mapped the ocean currents.","The ocean currents have been mapped."],
+[18,5,"She has written a paper on quantum physics.","A paper on quantum physics has been written."],
+[18,5,"He has patented the invention.","The invention has been patented."],
+[18,6,"She had collected all the data before writing the report.","All the data had been collected before writing the report."],
+[18,6,"He had verified the results before publishing them.","The results had been verified before publishing."],
+[18,6,"They had tested the vaccine on volunteers before approval.","The vaccine had been tested on volunteers before approval."],
+[18,7,"Scientists should share their findings openly.","Findings should be shared openly."],
+[18,7,"She can identify the species from its markings.","The species can be identified from its markings."],
+[18,7,"He must record every observation accurately.","Every observation must be recorded accurately."],
+[18,7,"They should replicate the experiment.","The experiment should be replicated."],
+[18,7,"Researchers may discover a cure soon.","A cure may be discovered soon."],
+[18,7,"She could explain complex theories simply.","Complex theories could be explained simply."],
+[18,7,"They must follow safety protocols in the lab.","Safety protocols must be followed in the lab."],
+[19,0,"She paints portraits in oil on canvas.","Portraits are painted in oil on canvas."],
+[19,0,"He writes poetry in his spare time.","Poetry is written in his spare time."],
+[19,0,"They perform classical dances at festivals.","Classical dances are performed at festivals."],
+[19,0,"She teaches art to underprivileged children.","Art is taught to underprivileged children."],
+[19,0,"He sculpts statues from marble.","Statues are sculpted from marble."],
+[19,0,"The museum displays ancient artefacts.","Ancient artefacts are displayed by the museum."],
+[19,0,"She weaves traditional textiles.","Traditional textiles are woven."],
+[19,0,"He carves wooden figurines by hand.","Wooden figurines are carved by hand."],
+[19,0,"They celebrate cultural festivals with great enthusiasm.","Cultural festivals are celebrated with great enthusiasm."],
+[19,0,"She curates exhibitions for the gallery.","Exhibitions are curated for the gallery."],
+[19,1,"He painted the mural on the city wall.","The mural was painted on the city wall."],
+[19,1,"She choreographed the dance for the competition.","The dance was choreographed for the competition."],
+[19,1,"They restored the ancient temple last year.","The ancient temple was restored last year."],
+[19,1,"He composed a symphony for the orchestra.","A symphony was composed for the orchestra."],
+[19,1,"She exhibited her sculptures at the national gallery.","Her sculptures were exhibited at the national gallery."],
+[19,1,"They organized a pottery workshop last weekend.","A pottery workshop was organized last weekend."],
+[19,1,"He published a collection of short stories.","A collection of short stories was published."],
+[19,1,"She designed the costumes for the stage play.","The costumes for the stage play were designed."],
+[19,1,"They translated the epic poem into English.","The epic poem was translated into English."],
+[19,1,"He photographed the heritage buildings.","The heritage buildings were photographed."],
+[19,2,"She will open an art school next year.","An art school will be opened next year."],
+[19,2,"They will host a cultural exchange programme.","A cultural exchange programme will be hosted."],
+[19,2,"He will exhibit his latest work at the biennale.","His latest work will be exhibited at the biennale."],
+[19,2,"She will perform at the theatre next month.","A performance will be given at the theatre next month."],
+[19,2,"They will restore the old fort this year.","The old fort will be restored this year."],
+[19,3,"She is sketching a landscape.","A landscape is being sketched."],
+[19,3,"He is composing music for the film.","Music is being composed for the film."],
+[19,3,"They are rehearsing the folk dance.","The folk dance is being rehearsed."],
+[19,3,"She is weaving a silk saree on the loom.","A silk saree is being woven on the loom."],
+[19,3,"He is restoring a 200-year-old painting.","A 200-year-old painting is being restored."],
+[19,4,"She was painting the sunset when the light faded.","The sunset was being painted when the light faded."],
+[19,4,"He was carving the statue when his chisel broke.","The statue was being carved when the chisel broke."],
+[19,4,"They were performing the traditional dance all evening.","The traditional dance was being performed all evening."],
+[19,5,"She has completed a series of twelve paintings.","A series of twelve paintings has been completed."],
+[19,5,"He has published his first novel.","His first novel has been published."],
+[19,5,"They have preserved the ancient manuscripts.","The ancient manuscripts have been preserved."],
+[19,5,"She has taught art for twenty years.","Art has been taught for twenty years."],
+[19,5,"He has donated his paintings to the museum.","His paintings have been donated to the museum."],
+[19,6,"She had finished the sculpture before the exhibition opened.","The sculpture had been finished before the exhibition opened."],
+[19,6,"He had learned classical music before switching to jazz.","Classical music had been learned before switching to jazz."],
+[19,6,"They had rehearsed the play a hundred times before opening night.","The play had been rehearsed a hundred times before opening night."],
+[19,7,"Artists should express themselves freely.","Self-expression should be practised freely by artists."],
+[19,7,"She can play both the sitar and the tabla.","Both the sitar and the tabla can be played by her."],
+[19,7,"He must preserve the traditional art forms.","Traditional art forms must be preserved."],
+[19,7,"They should support local artisans.","Local artisans should be supported."],
+[19,7,"You can learn pottery at the community centre.","Pottery can be learned at the community centre."],
+[19,7,"She may hold a solo exhibition next year.","A solo exhibition may be held next year."],
+[19,7,"He could create beautiful calligraphy effortlessly.","Beautiful calligraphy could be created effortlessly."],
+[19,7,"They must document the dying folk traditions.","The dying folk traditions must be documented."],
+[19,0,"The orchestra performs every Saturday evening.","A performance is given every Saturday evening."],
+[19,1,"She won the national award for her painting.","The national award was won by her for her painting."]
+];
+
+// ===== APP =====
+const PAGE=25;
+let filtered=[],shown=0,curCat=-1,curTense=-1,query="";
+
+function init(){
+  const cf=document.getElementById("catF");
+  let h='<button class="pill on" onclick="setCat(-1)">All Topics</button>';
+  C.forEach((c,i)=>h+='<button class="pill" onclick="setCat('+i+')">'+c+'</button>');
+  cf.innerHTML=h;
+  const tf=document.getElementById("tenF");
+  let th='<button class="tp on" onclick="setTense(-1)">All Tenses</button>';
+  T.forEach((t,i)=>th+='<button class="tp" onclick="setTense('+i+')">'+t+'</button>');
+  tf.innerHTML=th;
+  document.getElementById("q").addEventListener("input",function(e){query=e.target.value.toLowerCase();applyFilter()});
+  applyFilter();
+  window.addEventListener("scroll",function(){document.getElementById("btt").classList.toggle("show",window.scrollY>600)});
+}
+function setCat(i){curCat=i;document.querySelectorAll("#catF .pill").forEach(function(b,j){b.classList.toggle("on",j===(i+1))});applyFilter()}
+function setTense(i){curTense=i;document.querySelectorAll("#tenF .tp").forEach(function(b,j){b.classList.toggle("on",j===(i+1))});applyFilter()}
+function applyFilter(){
+  filtered=D.filter(function(d){
+    if(curCat>=0&&d[0]!==curCat)return false;
+    if(curTense>=0&&d[1]!==curTense)return false;
+    if(query&&d[2].toLowerCase().indexOf(query)===-1&&d[3].toLowerCase().indexOf(query)===-1)return false;
+    return true;
+  });
+  shown=0;
+  document.getElementById("list").innerHTML="";
+  document.getElementById("countBadge").textContent=filtered.length+" sentence"+(filtered.length!==1?"s":"");
+  loadMore();
+}
+function loadMore(){
+  var list=document.getElementById("list");
+  var end=Math.min(shown+PAGE,filtered.length);
+  var html="";
+  for(var i=shown;i<end;i++){
+    var d=filtered[i],num=D.indexOf(d)+1;
+    html+='<div class="card"><div class="card-head"><span class="card-num">#'+num+'</span><span class="ctag">'+C[d[0]]+'</span><span class="ttag">'+T[d[1]]+'</span></div><div class="pair"><div class="va"><div class="vlbl">Active Voice</div><div class="vtxt">'+esc(d[2])+'</div></div><div class="parr">→</div><div class="vp"><div class="vlbl">Passive Voice</div><div class="vtxt">'+esc(d[3])+'</div></div></div></div>';
+  }
+  list.insertAdjacentHTML("beforeend",html);
+  shown=end;
+  document.getElementById("more").style.display=shown>=filtered.length?"none":"block";
+  document.getElementById("noResults").style.display=filtered.length>0?"none":"block";
+}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function showRandom(){
+  var src=filtered.length?filtered:D;
+  var d=src[Math.floor(Math.random()*src.length)];
+  var num=D.indexOf(d)+1;
+  var list=document.getElementById("list");
+  list.innerHTML='<div class="card hl"><div class="card-head"><span class="card-num">#'+num+'</span><span class="ctag">'+C[d[0]]+'</span><span class="ttag">'+T[d[1]]+'</span></div><div class="pair"><div class="va"><div class="vlbl">Active Voice</div><div class="vtxt">'+esc(d[2])+'</div></div><div class="parr">→</div><div class="vp"><div class="vlbl">Passive Voice</div><div class="vtxt">'+esc(d[3])+'</div></div></div></div>';
+  shown=filtered.length;
+  var btn=document.getElementById("more");btn.style.display="block";btn.textContent="Show all matching sentences";
+  document.getElementById("noResults").style.display="none";
+  list.scrollIntoView({behavior:"smooth",block:"center"});
+}
+function toggleTheme(){
+  var r=document.documentElement;
+  var cur=r.getAttribute("data-theme");
+  if(cur==="dark"){r.setAttribute("data-theme","light");document.getElementById("themeBtn").innerHTML="&#9790; Theme"}
+  else{r.setAttribute("data-theme","dark");document.getElementById("themeBtn").innerHTML="&#9788; Theme"}
+}
+init();
+</script>
+</body>
+</html>
