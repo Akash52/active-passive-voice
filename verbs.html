@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="500 English verbs with V1, V2, V3 forms and Gujarati translations across 20 everyday categories. Regular and irregular verbs for daily speaking and writing.">
+<title>English Verb Forms — V1 · V2 · V3 with Gujarati</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bitter:wght@500;700&family=Source+Sans+3:ital,wght@0,400;0,600;0,700;1,400&family=Noto+Sans+Gujarati:wght@400;600&display=swap">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0}
+:root{
+  --bg:#F7F6F3;--surface:#FFF;--border:#E5E2DB;
+  --text:#2C2C2C;--dim:#757370;
+  --accent:#2B7A6E;--accent-soft:#E8F4F1;
+  --v2v3:#1B6B60;
+  --guj:#5D4037;
+  --irr:#D84315;--irr-bg:#FFF3E8;--irr-bd:#F4845F;
+  --reg:#2E7D32;--reg-bg:#EEF7EE;--reg-bd:#81C784;
+  --chip-bg:#EEEDEA;--chip-t:#4A4A4A;
+  --chip-on:#2B7A6E;--chip-on-t:#FFF;
+  --inp-bg:#FFF;--inp-bd:#D5D2CA;
+  --rand-bg:#F0EFEB;
+  --shadow:0 1px 3px rgba(0,0,0,.06);
+}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#1B1C1F;--surface:#26272B;--border:#3A3B40;
+  --text:#E2E1DE;--dim:#9A9893;
+  --accent:#5DC4AE;--accent-soft:#1D2F2A;
+  --v2v3:#6DD4BF;
+  --guj:#D7CCC8;
+  --irr:#FFB74D;--irr-bg:#2D2317;--irr-bd:#A67C3D;
+  --reg:#81C784;--reg-bg:#1B2B1D;--reg-bd:#4E8B52;
+  --chip-bg:#33343A;--chip-t:#B8B6B1;
+  --chip-on:#5DC4AE;--chip-on-t:#1B1C1F;
+  --inp-bg:#2B2C31;--inp-bd:#46474E;
+  --rand-bg:#2A2B2F;
+  --shadow:0 1px 3px rgba(0,0,0,.25);
+}}
+:root[data-theme="dark"]{
+  --bg:#1B1C1F;--surface:#26272B;--border:#3A3B40;
+  --text:#E2E1DE;--dim:#9A9893;
+  --accent:#5DC4AE;--accent-soft:#1D2F2A;
+  --v2v3:#6DD4BF;
+  --guj:#D7CCC8;
+  --irr:#FFB74D;--irr-bg:#2D2317;--irr-bd:#A67C3D;
+  --reg:#81C784;--reg-bg:#1B2B1D;--reg-bd:#4E8B52;
+  --chip-bg:#33343A;--chip-t:#B8B6B1;
+  --chip-on:#5DC4AE;--chip-on-t:#1B1C1F;
+  --inp-bg:#2B2C31;--inp-bd:#46474E;
+  --rand-bg:#2A2B2F;
+  --shadow:0 1px 3px rgba(0,0,0,.25);
+}
+body{
+  font-family:'Source Sans 3',system-ui,sans-serif;
+  background:var(--bg);color:var(--text);
+  padding:0 16px;line-height:1.5;
+  -webkit-font-smoothing:antialiased;
+}
+h1{font-family:'Bitter',Georgia,serif;font-weight:700;font-size:clamp(1.6rem,4vw,2.2rem);line-height:1.2;margin:0}
+.hdr{max-width:900px;margin:0 auto;padding:2.5rem 0 1.2rem;display:flex;flex-wrap:wrap;align-items:baseline;gap:8px 16px}
+.hdr h1{flex:1 1 auto}
+.sub{color:var(--dim);font-size:.95rem;margin:0}
+.sub .guj-label{font-family:'Noto Sans Gujarati',sans-serif;font-weight:600}
+#thm{
+  background:var(--chip-bg);border:1px solid var(--border);border-radius:8px;
+  padding:6px 12px;cursor:pointer;font-size:.85rem;color:var(--text);
+  font-family:inherit;white-space:nowrap;
+}
+#thm:hover{border-color:var(--accent)}
+
+.tip{
+  max-width:900px;margin:0 auto .8rem;
+  background:var(--accent-soft);border-left:3px solid var(--accent);
+  border-radius:0 8px 8px 0;padding:12px 16px;font-size:.9rem;color:var(--text);
+}
+.tip b{font-weight:700}
+.tip em{font-style:italic;color:var(--accent);font-weight:600}
+.tip .legend{margin-top:6px;color:var(--dim);font-size:.82rem}
+
+.controls{max-width:900px;margin:0 auto .6rem;display:flex;flex-wrap:wrap;gap:8px;align-items:center}
+#q{
+  flex:1 1 200px;padding:9px 14px;font-size:.92rem;font-family:inherit;
+  background:var(--inp-bg);border:1px solid var(--inp-bd);border-radius:8px;
+  color:var(--text);outline:none;
+}
+#q:focus{border-color:var(--accent);box-shadow:0 0 0 2px var(--accent-soft)}
+#q::placeholder{color:var(--dim)}
+.types{display:flex;gap:4px}
+.tbtn{
+  padding:7px 14px;font-size:.82rem;font-family:inherit;font-weight:600;
+  background:var(--chip-bg);color:var(--chip-t);border:1px solid transparent;
+  border-radius:6px;cursor:pointer;white-space:nowrap;
+}
+.tbtn:hover{border-color:var(--accent)}
+.tbtn.on{background:var(--chip-on);color:var(--chip-on-t)}
+
+.cats{max-width:900px;margin:0 auto .6rem;display:flex;flex-wrap:wrap;gap:5px}
+.chip{
+  padding:5px 12px;font-size:.78rem;font-family:inherit;font-weight:600;
+  background:var(--chip-bg);color:var(--chip-t);
+  border:1px solid transparent;border-radius:16px;cursor:pointer;white-space:nowrap;
+}
+.chip:hover{border-color:var(--accent)}
+.chip.on{background:var(--chip-on);color:var(--chip-on-t)}
+
+.stats{
+  max-width:900px;margin:0 auto .6rem;
+  display:flex;align-items:center;gap:12px;font-size:.85rem;color:var(--dim);
+}
+.stats b{color:var(--text);font-weight:700}
+#rnd{
+  margin-left:auto;padding:6px 14px;font-size:.82rem;font-family:inherit;font-weight:600;
+  background:var(--accent);color:#FFF;border:none;border-radius:6px;cursor:pointer;
+}
+#rnd:hover{opacity:.9}
+
+.rand{
+  max-width:900px;margin:0 auto 1rem;
+  background:var(--rand-bg);border:2px solid var(--accent);border-radius:12px;
+  padding:20px 24px;position:relative;
+}
+.rand .close{
+  position:absolute;top:8px;right:12px;background:none;border:none;
+  font-size:1.3rem;color:var(--dim);cursor:pointer;line-height:1;
+}
+.rand .close:hover{color:var(--text)}
+.rand .rv1{font-family:'Bitter',Georgia,serif;font-size:1.8rem;font-weight:700;color:var(--accent);margin-bottom:4px}
+.rand .rforms{font-size:1.05rem;display:flex;flex-wrap:wrap;gap:16px;margin-bottom:8px}
+.rand .rforms .rl{font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--dim);margin-right:4px}
+.rand .rforms .rf{color:var(--v2v3);font-weight:700}
+.rand .rguj{font-family:'Noto Sans Gujarati',sans-serif;font-size:1.15rem;font-weight:600;color:var(--guj);margin-bottom:6px}
+.rand .rmeta{display:flex;gap:10px;align-items:center;font-size:.8rem;color:var(--dim)}
+.rand .rmeta .badge{font-size:.72rem}
+
+.grid{
+  max-width:900px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px;
+}
+.c{
+  background:var(--surface);border:1px solid var(--border);border-radius:10px;
+  padding:14px 16px 12px;border-left:3px solid var(--reg-bd);
+  box-shadow:var(--shadow);transition:border-color .15s;
+}
+.c:hover{border-color:var(--accent)}
+.c.ir{border-left-color:var(--irr-bd)}
+.c-h{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.v1{font-family:'Bitter',Georgia,serif;font-weight:700;font-size:1.15rem;color:var(--text)}
+.badge{
+  font-size:.65rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;
+  padding:2px 8px;border-radius:4px;
+}
+.badge.ir{background:var(--irr-bg);color:var(--irr)}
+.badge.re{background:var(--reg-bg);color:var(--reg)}
+.c-f{display:flex;flex-wrap:wrap;gap:4px 14px;margin-bottom:8px}
+.c-f .l{font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;color:var(--dim)}
+.c-f .f{font-weight:600;color:var(--v2v3);margin-left:3px}
+.c-g{
+  font-family:'Noto Sans Gujarati',sans-serif;font-weight:600;font-size:1rem;
+  color:var(--guj);border-top:1px dashed var(--border);padding-top:7px;
+}
+
+.more{
+  display:block;max-width:900px;margin:1.2rem auto;width:100%;padding:12px;
+  font-size:.92rem;font-family:inherit;font-weight:600;
+  background:var(--accent);color:#FFF;border:none;border-radius:8px;cursor:pointer;
+}
+.more:hover{opacity:.9}
+
+.top{
+  position:fixed;bottom:24px;right:24px;width:44px;height:44px;
+  background:var(--accent);color:#FFF;border:none;border-radius:50%;
+  font-size:1.2rem;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.2);
+  display:flex;align-items:center;justify-content:center;
+  z-index:90;
+}
+.top:hover{opacity:.9}
+
+.empty{
+  max-width:900px;margin:2rem auto;text-align:center;color:var(--dim);font-size:1rem;
+}
+
+footer{
+  max-width:900px;margin:2rem auto 1rem;text-align:center;
+  font-size:.78rem;color:var(--dim);padding:16px 0;
+  border-top:1px solid var(--border);
+}
+
+@media(max-width:540px){
+  .grid{grid-template-columns:1fr}
+  .hdr{padding:1.8rem 0 1rem}
+  .controls{flex-direction:column;align-items:stretch}
+  #q{flex:0 0 auto;width:100%}
+  .rand .rv1{font-size:1.5rem}
+}
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <div>
+    <h1>English Verb Forms</h1>
+    <p class="sub">V1 · V2 · V3 — <span class="guj-label">ગુજરાતી અનુવાદ</span></p>
+  </div>
+  <button id="thm" aria-label="Toggle theme">Theme</button>
+</div>
+
+<div class="tip">
+  <b>Regular verbs</b> add <em>-ed</em> for past forms: play → played → played.<br>
+  <b>Irregular verbs</b> change their spelling: go → went → gone.<br>
+  <span class="legend">V1 = Base Form (Present) · V2 = Past Simple · V3 = Past Participle</span>
+</div>
+
+<div class="controls">
+  <input type="search" id="q" placeholder="Search English or ગુજરાતી...">
+  <div class="types" id="types"></div>
+</div>
+<div id="cats" class="cats"></div>
+
+<div class="stats">
+  <span><b id="cnt">500</b> verbs</span>
+  <button id="rnd">Random Verb</button>
+</div>
+
+<div id="rand" class="rand" hidden></div>
+<div id="grid" class="grid"></div>
+<div id="empty" class="empty" hidden>No verbs match your filters.</div>
+<button id="more" class="more" hidden>Show More</button>
+<button id="top" class="top" hidden aria-label="Back to top">&#8593;</button>
+
+<footer>500 English Verbs · V1, V2, V3 with Gujarati · For learning &amp; reference</footer>
+
+<script>
+const C=["Daily Routine","Movement & Travel","Communication","Thinking & Learning","Emotions & Feelings","Work & Business","Cooking & Food","Health & Body","Home & Cleaning","Shopping & Money","Technology","Nature & Weather","Social & Relationships","Sports & Games","Arts & Creativity","Building & Making","Giving & Taking","Seeing & Perceiving","Law & Rules","General Actions"];
+
+// [catIdx, v1, v2, v3, gujarati, type(0=irregular,1=regular)]
+const D=[
+[0,"wake","woke","woken","જાગવું",0],
+[0,"sleep","slept","slept","સૂવું",0],
+[0,"eat","ate","eaten","ખાવું",0],
+[0,"drink","drank","drunk","પીવું",0],
+[0,"bathe","bathed","bathed","નહાવું",1],
+[0,"brush","brushed","brushed","બ્રશ કરવું",1],
+[0,"dress","dressed","dressed","કપડાં પહેરવું",1],
+[0,"wear","wore","worn","પહેરવું",0],
+[0,"rest","rested","rested","આરામ કરવું",1],
+[0,"shave","shaved","shaved","દાઢી કરવું",1],
+[0,"comb","combed","combed","વાળ ઓળવું",1],
+[0,"dry","dried","dried","સૂકવવું",1],
+[0,"prepare","prepared","prepared","તૈયાર કરવું",1],
+[0,"change","changed","changed","બદલવું",1],
+[0,"iron","ironed","ironed","ઇસ્ત્રી કરવું",1],
+[0,"hang","hung","hung","લટકાવવું",0],
+[0,"lock","locked","locked","તાળું મારવું",1],
+[0,"unlock","unlocked","unlocked","તાળું ખોલવું",1],
+[0,"fold","folded","folded","વાળવું",1],
+[0,"yawn","yawned","yawned","બગાસું ખાવું",1],
+[0,"snore","snored","snored","નસકોરાં બોલાવવાં",1],
+[0,"nap","napped","napped","ઝોકું ખાવું",1],
+[0,"oversleep","overslept","overslept","વધારે ઊંઘવું",0],
+[0,"rinse","rinsed","rinsed","ધોઈ નાખવું",1],
+[0,"gargle","gargled","gargled","કોગળા કરવા",1],
+[1,"go","went","gone","જવું",0],
+[1,"come","came","come","આવવું",0],
+[1,"walk","walked","walked","ચાલવું",1],
+[1,"run","ran","run","દોડવું",0],
+[1,"sit","sat","sat","બેસવું",0],
+[1,"stand","stood","stood","ઊભા રહેવું",0],
+[1,"fall","fell","fallen","પડવું",0],
+[1,"climb","climbed","climbed","ચઢવું",1],
+[1,"jump","jumped","jumped","કૂદવું",1],
+[1,"fly","flew","flown","ઉડવું",0],
+[1,"swim","swam","swum","તરવું",0],
+[1,"ride","rode","ridden","સવારી કરવું",0],
+[1,"drive","drove","driven","વાહન ચલાવવું",0],
+[1,"travel","travelled","travelled","મુસાફરી કરવું",1],
+[1,"arrive","arrived","arrived","પહોંચવું",1],
+[1,"leave","left","left","છોડવું",0],
+[1,"reach","reached","reached","પહોંચવું",1],
+[1,"return","returned","returned","પાછા આવવું",1],
+[1,"enter","entered","entered","પ્રવેશ કરવું",1],
+[1,"exit","exited","exited","બહાર નીકળવું",1],
+[1,"cross","crossed","crossed","પાર કરવું",1],
+[1,"turn","turned","turned","વળવું",1],
+[1,"stop","stopped","stopped","રોકાવું",1],
+[1,"move","moved","moved","ખસેડવું",1],
+[1,"hurry","hurried","hurried","ઉતાવળ કરવું",1],
+[2,"say","said","said","કહેવું",0],
+[2,"tell","told","told","જણાવવું",0],
+[2,"speak","spoke","spoken","બોલવું",0],
+[2,"talk","talked","talked","વાત કરવું",1],
+[2,"ask","asked","asked","પૂછવું",1],
+[2,"answer","answered","answered","જવાબ આપવું",1],
+[2,"call","called","called","ફોન કરવું",1],
+[2,"shout","shouted","shouted","બૂમ પાડવું",1],
+[2,"whisper","whispered","whispered","ગુસપુસ કરવું",1],
+[2,"read","read","read","વાંચવું",0],
+[2,"write","wrote","written","લખવું",0],
+[2,"sing","sang","sung","ગાવું",0],
+[2,"listen","listened","listened","સાંભળવું",1],
+[2,"hear","heard","heard","સાંભળવું",0],
+[2,"explain","explained","explained","સમજાવવું",1],
+[2,"describe","described","described","વર્ણન કરવું",1],
+[2,"discuss","discussed","discussed","ચર્ચા કરવું",1],
+[2,"argue","argued","argued","દલીલ કરવું",1],
+[2,"complain","complained","complained","ફરિયાદ કરવું",1],
+[2,"suggest","suggested","suggested","સૂચન કરવું",1],
+[2,"promise","promised","promised","વચન આપવું",1],
+[2,"warn","warned","warned","ચેતવણી આપવું",1],
+[2,"announce","announced","announced","જાહેર કરવું",1],
+[2,"greet","greeted","greeted","અભિવાદન કરવું",1],
+[2,"introduce","introduced","introduced","ઓળખાણ કરાવવું",1],
+[3,"think","thought","thought","વિચારવું",0],
+[3,"know","knew","known","જાણવું",0],
+[3,"learn","learnt","learnt","શીખવું",0],
+[3,"teach","taught","taught","શીખવવું",0],
+[3,"understand","understood","understood","સમજવું",0],
+[3,"forget","forgot","forgotten","ભૂલવું",0],
+[3,"remember","remembered","remembered","યાદ કરવું",1],
+[3,"study","studied","studied","અભ્યાસ કરવું",1],
+[3,"decide","decided","decided","નક્કી કરવું",1],
+[3,"believe","believed","believed","માનવું",1],
+[3,"guess","guessed","guessed","અનુમાન કરવું",1],
+[3,"imagine","imagined","imagined","કલ્પના કરવું",1],
+[3,"plan","planned","planned","આયોજન કરવું",1],
+[3,"solve","solved","solved","ઉકેલવું",1],
+[3,"compare","compared","compared","સરખામણી કરવું",1],
+[3,"choose","chose","chosen","પસંદ કરવું",0],
+[3,"realize","realized","realized","ખ્યાલ આવવું",1],
+[3,"discover","discovered","discovered","શોધ કરવું",1],
+[3,"recognize","recognized","recognized","ઓળખવું",1],
+[3,"doubt","doubted","doubted","શંકા કરવું",1],
+[3,"expect","expected","expected","અપેક્ષા રાખવું",1],
+[3,"wonder","wondered","wondered","વિચાર કરવું",1],
+[3,"consider","considered","considered","વિચારણા કરવું",1],
+[3,"assume","assumed","assumed","ધારવું",1],
+[3,"focus","focused","focused","ધ્યાન આપવું",1],
+[4,"feel","felt","felt","અનુભવવું",0],
+[4,"love","loved","loved","પ્રેમ કરવું",1],
+[4,"like","liked","liked","ગમવું",1],
+[4,"hate","hated","hated","ધિક્કારવું",1],
+[4,"enjoy","enjoyed","enjoyed","આનંદ માણવું",1],
+[4,"hope","hoped","hoped","આશા રાખવું",1],
+[4,"wish","wished","wished","ઇચ્છા કરવું",1],
+[4,"fear","feared","feared","ડરવું",1],
+[4,"worry","worried","worried","ચિંતા કરવું",1],
+[4,"cry","cried","cried","રડવું",1],
+[4,"laugh","laughed","laughed","હસવું",1],
+[4,"smile","smiled","smiled","સ્મિત કરવું",1],
+[4,"surprise","surprised","surprised","નવાઈ લાગવું",1],
+[4,"miss","missed","missed","યાદ આવવું",1],
+[4,"trust","trusted","trusted","ભરોસો કરવું",1],
+[4,"care","cared","cared","પરવા કરવું",1],
+[4,"suffer","suffered","suffered","સહન કરવું",1],
+[4,"bore","bored","bored","કંટાળો આવવું",1],
+[4,"satisfy","satisfied","satisfied","સંતોષ થવું",1],
+[4,"excite","excited","excited","ઉત્સાહિત થવું",1],
+[4,"frighten","frightened","frightened","ડરાવવું",1],
+[4,"annoy","annoyed","annoyed","ચીડવવું",1],
+[4,"please","pleased","pleased","ખુશ કરવું",1],
+[4,"relax","relaxed","relaxed","હળવાશ અનુભવવું",1],
+[4,"regret","regretted","regretted","પસ્તાવું",1],
+[5,"work","worked","worked","કામ કરવું",1],
+[5,"earn","earned","earned","કમાવું",1],
+[5,"hire","hired","hired","ભાડે રાખવું",1],
+[5,"fire","fired","fired","છૂટા કરવું",1],
+[5,"manage","managed","managed","સંચાલન કરવું",1],
+[5,"lead","led","led","દોરવણી કરવું",0],
+[5,"meet","met","met","મળવું",0],
+[5,"begin","began","begun","શરૂ કરવું",0],
+[5,"finish","finished","finished","પૂરું કરવું",1],
+[5,"complete","completed","completed","પૂર્ણ કરવું",1],
+[5,"succeed","succeeded","succeeded","સફળ થવું",1],
+[5,"fail","failed","failed","નિષ્ફળ થવું",1],
+[5,"improve","improved","improved","સુધારવું",1],
+[5,"develop","developed","developed","વિકાસ કરવું",1],
+[5,"produce","produced","produced","ઉત્પાદન કરવું",1],
+[5,"deliver","delivered","delivered","પહોંચાડવું",1],
+[5,"sign","signed","signed","સહી કરવું",1],
+[5,"approve","approved","approved","મંજૂરી આપવું",1],
+[5,"reject","rejected","rejected","નકારવું",1],
+[5,"promote","promoted","promoted","બઢતી આપવું",1],
+[5,"organize","organized","organized","ગોઠવવું",1],
+[5,"achieve","achieved","achieved","પ્રાપ્ત કરવું",1],
+[5,"apply","applied","applied","અરજી કરવું",1],
+[5,"resign","resigned","resigned","રાજીનામું આપવું",1],
+[5,"retire","retired","retired","નિવૃત્ત થવું",1],
+[6,"cook","cooked","cooked","રાંધવું",1],
+[6,"bake","baked","baked","બેક કરવું",1],
+[6,"fry","fried","fried","તળવું",1],
+[6,"boil","boiled","boiled","ઉકાળવું",1],
+[6,"roast","roasted","roasted","શેકવું",1],
+[6,"grill","grilled","grilled","ગ્રિલ કરવું",1],
+[6,"chop","chopped","chopped","સમારવું",1],
+[6,"slice","sliced","sliced","કાપવું",1],
+[6,"peel","peeled","peeled","છાલ ઉતારવું",1],
+[6,"mix","mixed","mixed","ભેળવવું",1],
+[6,"stir","stirred","stirred","હલાવવું",1],
+[6,"pour","poured","poured","રેડવું",1],
+[6,"serve","served","served","પીરસવું",1],
+[6,"taste","tasted","tasted","ચાખવું",1],
+[6,"feed","fed","fed","ખવડાવવું",0],
+[6,"squeeze","squeezed","squeezed","નીચોવવું",1],
+[6,"melt","melted","melted","ઓગાળવું",1],
+[6,"freeze","froze","frozen","થીજવવું",0],
+[6,"heat","heated","heated","ગરમ કરવું",1],
+[6,"spread","spread","spread","ફેલાવવું",0],
+[6,"sprinkle","sprinkled","sprinkled","છાંટવું",1],
+[6,"knead","kneaded","kneaded","લોટ બાંધવું",1],
+[6,"measure","measured","measured","માપવું",1],
+[6,"grind","ground","ground","દળવું",0],
+[6,"soak","soaked","soaked","પલાળવું",1],
+[7,"breathe","breathed","breathed","શ્વાસ લેવું",1],
+[7,"cough","coughed","coughed","ખાંસવું",1],
+[7,"sneeze","sneezed","sneezed","છીંકવું",1],
+[7,"bleed","bled","bled","લોહી નીકળવું",0],
+[7,"hurt","hurt","hurt","દુઃખવું",0],
+[7,"heal","healed","healed","રૂઝાવું",1],
+[7,"cure","cured","cured","સારવાર કરવું",1],
+[7,"recover","recovered","recovered","સાજા થવું",1],
+[7,"exercise","exercised","exercised","કસરત કરવું",1],
+[7,"sweat","sweated","sweated","પરસેવો થવું",1],
+[7,"stretch","stretched","stretched","ખેંચવું",1],
+[7,"bend","bent","bent","વાળવું",0],
+[7,"weigh","weighed","weighed","વજન કરવું",1],
+[7,"grow","grew","grown","વધવું",0],
+[7,"swell","swelled","swollen","સૂજવું",0],
+[7,"vomit","vomited","vomited","ઊલટી થવું",1],
+[7,"faint","fainted","fainted","બેહોશ થવું",1],
+[7,"shake","shook","shaken","ધ્રૂજવું",0],
+[7,"inject","injected","injected","ઇન્જેક્શન આપવું",1],
+[7,"diagnose","diagnosed","diagnosed","નિદાન કરવું",1],
+[7,"operate","operated","operated","ઓપરેશન કરવું",1],
+[7,"examine","examined","examined","તપાસવું",1],
+[7,"prescribe","prescribed","prescribed","દવા લખવું",1],
+[7,"bandage","bandaged","bandaged","પાટો બાંધવું",1],
+[7,"ache","ached","ached","દુખાવો થવું",1],
+[8,"clean","cleaned","cleaned","સાફ કરવું",1],
+[8,"sweep","swept","swept","વાળવું",0],
+[8,"mop","mopped","mopped","પોતું મારવું",1],
+[8,"dust","dusted","dusted","ધૂળ સાફ કરવું",1],
+[8,"wipe","wiped","wiped","લૂછવું",1],
+[8,"scrub","scrubbed","scrubbed","ઘસવું",1],
+[8,"polish","polished","polished","ચમકાવવું",1],
+[8,"arrange","arranged","arranged","ગોઠવવું",1],
+[8,"decorate","decorated","decorated","સજાવવું",1],
+[8,"repair","repaired","repaired","સમારકામ કરવું",1],
+[8,"fix","fixed","fixed","ઠીક કરવું",1],
+[8,"paint","painted","painted","રંગ કરવું",1],
+[8,"build","built","built","બાંધવું",0],
+[8,"break","broke","broken","તોડવું",0],
+[8,"set","set","set","ગોઠવવું",0],
+[8,"lay","laid","laid","પાથરવું",0],
+[8,"dig","dug","dug","ખોદવું",0],
+[8,"plant","planted","planted","વાવવું",1],
+[8,"water","watered","watered","પાણી આપવું",1],
+[8,"store","stored","stored","સંગ્રહ કરવું",1],
+[8,"stack","stacked","stacked","ગંજી કરવું",1],
+[8,"tidy","tidied","tidied","વ્યવસ્થિત કરવું",1],
+[8,"empty","emptied","emptied","ખાલી કરવું",1],
+[8,"fill","filled","filled","ભરવું",1],
+[8,"replace","replaced","replaced","બદલવું",1],
+[9,"buy","bought","bought","ખરીદવું",0],
+[9,"sell","sold","sold","વેચવું",0],
+[9,"pay","paid","paid","ચૂકવવું",0],
+[9,"spend","spent","spent","ખર્ચ કરવું",0],
+[9,"save","saved","saved","બચાવવું",1],
+[9,"cost","cost","cost","કિંમત હોવું",0],
+[9,"lend","lent","lent","ઉધાર આપવું",0],
+[9,"borrow","borrowed","borrowed","ઉધાર લેવું",1],
+[9,"order","ordered","ordered","ઓર્ડર કરવું",1],
+[9,"exchange","exchanged","exchanged","બદલી કરવું",1],
+[9,"bargain","bargained","bargained","ભાવતાલ કરવું",1],
+[9,"wrap","wrapped","wrapped","લપેટવું",1],
+[9,"pack","packed","packed","પેક કરવું",1],
+[9,"ship","shipped","shipped","મોકલવું",1],
+[9,"charge","charged","charged","ચાર્જ કરવું",1],
+[9,"owe","owed","owed","દેવું હોવું",1],
+[9,"invest","invested","invested","રોકાણ કરવું",1],
+[9,"withdraw","withdrew","withdrawn","ઉપાડવું",0],
+[9,"deposit","deposited","deposited","જમા કરવું",1],
+[9,"count","counted","counted","ગણવું",1],
+[9,"calculate","calculated","calculated","ગણતરી કરવું",1],
+[9,"afford","afforded","afforded","પોસાવું",1],
+[9,"refund","refunded","refunded","પૈસા પાછા આપવા",1],
+[9,"discount","discounted","discounted","છૂટ આપવું",1],
+[9,"bid","bid","bid","બોલી લગાવવું",0],
+[10,"type","typed","typed","ટાઇપ કરવું",1],
+[10,"click","clicked","clicked","ક્લિક કરવું",1],
+[10,"search","searched","searched","શોધવું",1],
+[10,"download","downloaded","downloaded","ડાઉનલોડ કરવું",1],
+[10,"upload","uploaded","uploaded","અપલોડ કરવું",1],
+[10,"install","installed","installed","ઇન્સ્ટોલ કરવું",1],
+[10,"delete","deleted","deleted","કાઢી નાખવું",1],
+[10,"copy","copied","copied","નકલ કરવું",1],
+[10,"paste","pasted","pasted","પેસ્ટ કરવું",1],
+[10,"print","printed","printed","છાપવું",1],
+[10,"scan","scanned","scanned","સ્કેન કરવું",1],
+[10,"record","recorded","recorded","રેકોર્ડ કરવું",1],
+[10,"stream","streamed","streamed","સ્ટ્રીમ કરવું",1],
+[10,"share","shared","shared","શેર કરવું",1],
+[10,"post","posted","posted","પોસ્ટ કરવું",1],
+[10,"update","updated","updated","અપડેટ કરવું",1],
+[10,"connect","connected","connected","જોડવું",1],
+[10,"disconnect","disconnected","disconnected","છૂટું કરવું",1],
+[10,"restart","restarted","restarted","ફરી ચાલુ કરવું",1],
+[10,"program","programmed","programmed","પ્રોગ્રામ કરવું",1],
+[10,"browse","browsed","browsed","બ્રાઉઝ કરવું",1],
+[10,"edit","edited","edited","ફેરફાર કરવું",1],
+[10,"swipe","swiped","swiped","સ્વાઇપ કરવું",1],
+[10,"zoom","zoomed","zoomed","ઝૂમ કરવું",1],
+[10,"sync","synced","synced","સિંક કરવું",1],
+[11,"rain","rained","rained","વરસાદ પડવું",1],
+[11,"blow","blew","blown","ફૂંકવું",0],
+[11,"shine","shone","shone","ચમકવું",0],
+[11,"flow","flowed","flowed","વહેવું",1],
+[11,"bloom","bloomed","bloomed","ખીલવું",1],
+[11,"flood","flooded","flooded","પૂર આવવું",1],
+[11,"burn","burnt","burnt","બળવું",0],
+[11,"rise","rose","risen","ઊગવું",0],
+[11,"thunder","thundered","thundered","ગર્જના થવું",1],
+[11,"snow","snowed","snowed","બરફ પડવું",1],
+[11,"scatter","scattered","scattered","વિખેરાવું",1],
+[11,"wither","withered","withered","કરમાવું",1],
+[11,"harvest","harvested","harvested","લણવું",1],
+[11,"sow","sowed","sown","વાવવું",0],
+[11,"pluck","plucked","plucked","તોડવું",1],
+[11,"sprout","sprouted","sprouted","અંકુર ફૂટવું",1],
+[11,"roar","roared","roared","ગર્જવું",1],
+[11,"hail","hailed","hailed","કરા પડવા",1],
+[11,"drizzle","drizzled","drizzled","ઝરમર વરસવું",1],
+[11,"evaporate","evaporated","evaporated","બાષ્પીભવન થવું",1],
+[11,"erode","eroded","eroded","ધોવાણ થવું",1],
+[11,"pollinate","pollinated","pollinated","પરાગનયન કરવું",1],
+[11,"migrate","migrated","migrated","સ્થળાંતર કરવું",1],
+[11,"hibernate","hibernated","hibernated","શિયાળુ ઊંઘ ખાવું",1],
+[12,"marry","married","married","લગ્ન કરવું",1],
+[12,"invite","invited","invited","આમંત્રણ આપવું",1],
+[12,"visit","visited","visited","મુલાકાત લેવું",1],
+[12,"welcome","welcomed","welcomed","સ્વાગત કરવું",1],
+[12,"thank","thanked","thanked","આભાર માનવું",1],
+[12,"apologize","apologized","apologized","માફી માંગવું",1],
+[12,"forgive","forgave","forgiven","માફ કરવું",0],
+[12,"help","helped","helped","મદદ કરવું",1],
+[12,"celebrate","celebrated","celebrated","ઉજવવું",1],
+[12,"congratulate","congratulated","congratulated","અભિનંદન આપવું",1],
+[12,"hug","hugged","hugged","ભેટવું",1],
+[12,"kiss","kissed","kissed","ચુંબન કરવું",1],
+[12,"wave","waved","waved","હાથ હલાવવું",1],
+[12,"bow","bowed","bowed","નમન કરવું",1],
+[12,"accompany","accompanied","accompanied","સાથે જવું",1],
+[12,"attend","attended","attended","હાજર રહેવું",1],
+[12,"join","joined","joined","જોડાવું",1],
+[12,"separate","separated","separated","છૂટા પડવું",1],
+[12,"support","supported","supported","ટેકો આપવું",1],
+[12,"encourage","encouraged","encouraged","પ્રોત્સાહન આપવું",1],
+[12,"respect","respected","respected","આદર કરવું",1],
+[12,"praise","praised","praised","વખાણ કરવું",1],
+[12,"blame","blamed","blamed","દોષ આપવું",1],
+[12,"gossip","gossiped","gossiped","ગપસપ કરવું",1],
+[12,"quarrel","quarrelled","quarrelled","ઝઘડો કરવું",1],
+[13,"play","played","played","રમવું",1],
+[13,"win","won","won","જીતવું",0],
+[13,"lose","lost","lost","હારવું",0],
+[13,"throw","threw","thrown","ફેંકવું",0],
+[13,"catch","caught","caught","પકડવું",0],
+[13,"kick","kicked","kicked","લાત મારવું",1],
+[13,"hit","hit","hit","મારવું",0],
+[13,"score","scored","scored","ગોલ કરવું",1],
+[13,"race","raced","raced","દોડ લગાવવું",1],
+[13,"compete","competed","competed","સ્પર્ધા કરવું",1],
+[13,"practise","practised","practised","પ્રેક્ટિસ કરવું",1],
+[13,"train","trained","trained","તાલીમ લેવું",1],
+[13,"jog","jogged","jogged","ધીમે દોડવું",1],
+[13,"dive","dived","dived","ડૂબકી મારવું",1],
+[13,"shoot","shot","shot","શૂટ કરવું",0],
+[13,"pass","passed","passed","પાસ કરવું",1],
+[13,"bowl","bowled","bowled","બોલિંગ કરવું",1],
+[13,"bat","batted","batted","બેટિંગ કરવું",1],
+[13,"defend","defended","defended","બચાવ કરવું",1],
+[13,"attack","attacked","attacked","હુમલો કરવું",1],
+[13,"bounce","bounced","bounced","ઉછળવું",1],
+[13,"swing","swung","swung","ઝુલાવવું",0],
+[13,"wrestle","wrestled","wrestled","કુસ્તી કરવું",1],
+[13,"skip","skipped","skipped","છલાંગ મારવું",1],
+[14,"draw","drew","drawn","દોરવું",0],
+[14,"design","designed","designed","ડિઝાઇન કરવું",1],
+[14,"create","created","created","બનાવવું",1],
+[14,"compose","composed","composed","રચના કરવું",1],
+[14,"perform","performed","performed","પ્રદર્શન કરવું",1],
+[14,"act","acted","acted","અભિનય કરવું",1],
+[14,"direct","directed","directed","નિર્દેશન કરવું",1],
+[14,"photograph","photographed","photographed","ફોટો પાડવું",1],
+[14,"sculpt","sculpted","sculpted","શિલ્પ બનાવવું",1],
+[14,"carve","carved","carved","કોતરવું",1],
+[14,"stitch","stitched","stitched","સીવવું",1],
+[14,"knit","knitted","knitted","ગૂંથવું",1],
+[14,"weave","wove","woven","વણવું",0],
+[14,"embroider","embroidered","embroidered","ભરતકામ કરવું",1],
+[14,"mould","moulded","moulded","ઘાટ આપવું",1],
+[14,"sketch","sketched","sketched","સ્કેચ કરવું",1],
+[14,"colour","coloured","coloured","રંગ ભરવું",1],
+[14,"exhibit","exhibited","exhibited","પ્રદર્શન કરવું",1],
+[14,"inspire","inspired","inspired","પ્રેરણા આપવું",1],
+[14,"express","expressed","expressed","અભિવ્યક્ત કરવું",1],
+[14,"recite","recited","recited","પઠન કરવું",1],
+[14,"dance","danced","danced","નાચવું",1],
+[14,"rehearse","rehearsed","rehearsed","રિહર્સલ કરવું",1],
+[14,"portray","portrayed","portrayed","ચિત્રણ કરવું",1],
+[15,"make","made","made","બનાવવું",0],
+[15,"cut","cut","cut","કાપવું",0],
+[15,"attach","attached","attached","જોડવું",1],
+[15,"fasten","fastened","fastened","બાંધવું",1],
+[15,"loosen","loosened","loosened","ઢીલું કરવું",1],
+[15,"tighten","tightened","tightened","કસવું",1],
+[15,"nail","nailed","nailed","ખીલો ઠોકવું",1],
+[15,"hammer","hammered","hammered","હથોડા મારવું",1],
+[15,"drill","drilled","drilled","ડ્રિલ કરવું",1],
+[15,"weld","welded","welded","વેલ્ડ કરવું",1],
+[15,"assemble","assembled","assembled","ભેગું કરવું",1],
+[15,"remove","removed","removed","કાઢવું",1],
+[15,"demolish","demolished","demolished","તોડી પાડવું",1],
+[15,"construct","constructed","constructed","નિર્માણ કરવું",1],
+[15,"shape","shaped","shaped","આકાર આપવું",1],
+[15,"glue","glued","glued","ચોંટાડવું",1],
+[15,"tie","tied","tied","બાંધવું",1],
+[15,"saw","sawed","sawn","કરવત વડે કાપવું",0],
+[15,"sand","sanded","sanded","ઘસીને સાફ કરવું",1],
+[15,"bolt","bolted","bolted","બોલ્ટ લગાવવું",1],
+[15,"screw","screwed","screwed","સ્ક્રૂ ફેરવવું",1],
+[15,"plaster","plastered","plastered","પ્લાસ્ટર કરવું",1],
+[15,"cement","cemented","cemented","સિમેન્ટ લગાવવું",1],
+[15,"level","levelled","levelled","સમતળ કરવું",1],
+[15,"mount","mounted","mounted","ચડાવવું",1],
+[16,"give","gave","given","આપવું",0],
+[16,"take","took","taken","લેવું",0],
+[16,"bring","brought","brought","લાવવું",0],
+[16,"send","sent","sent","મોકલવું",0],
+[16,"receive","received","received","મેળવવું",1],
+[16,"get","got","got","મળવું",0],
+[16,"keep","kept","kept","રાખવું",0],
+[16,"hold","held","held","પકડી રાખવું",0],
+[16,"put","put","put","મૂકવું",0],
+[16,"pick","picked","picked","ઉપાડવું",1],
+[16,"carry","carried","carried","ઉઠાવવું",1],
+[16,"lift","lifted","lifted","ઊંચકવું",1],
+[16,"drop","dropped","dropped","પડવા દેવું",1],
+[16,"hand","handed","handed","હાથમાં આપવું",1],
+[16,"collect","collected","collected","એકઠું કરવું",1],
+[16,"gather","gathered","gathered","ભેગું કરવું",1],
+[16,"distribute","distributed","distributed","વિતરણ કરવું",1],
+[16,"donate","donated","donated","દાન કરવું",1],
+[16,"offer","offered","offered","ઓફર કરવું",1],
+[16,"accept","accepted","accepted","સ્વીકારવું",1],
+[16,"refuse","refused","refused","ના પાડવું",1],
+[16,"grab","grabbed","grabbed","પકડી લેવું",1],
+[16,"snatch","snatched","snatched","છીનવી લેવું",1],
+[16,"toss","tossed","tossed","ઉછાળવું",1],
+[16,"fetch","fetched","fetched","જઈને લાવવું",1],
+[17,"see","saw","seen","જોવું",0],
+[17,"look","looked","looked","જોવું (નજર)",1],
+[17,"watch","watched","watched","જોવું (ધ્યાનથી)",1],
+[17,"notice","noticed","noticed","ધ્યાન આવવું",1],
+[17,"observe","observed","observed","નિરીક્ષણ કરવું",1],
+[17,"find","found","found","શોધી કાઢવું",0],
+[17,"show","showed","shown","બતાવવું",0],
+[17,"hide","hid","hidden","છુપાવવું",0],
+[17,"appear","appeared","appeared","દેખાવું",1],
+[17,"disappear","disappeared","disappeared","અદૃશ્ય થવું",1],
+[17,"stare","stared","stared","તાકી રહેવું",1],
+[17,"glance","glanced","glanced","નજર નાખવું",1],
+[17,"peek","peeked","peeked","ડોકિયું કરવું",1],
+[17,"inspect","inspected","inspected","ચકાસવું",1],
+[17,"detect","detected","detected","શોધી કાઢવું",1],
+[17,"reveal","revealed","revealed","પ્રગટ કરવું",1],
+[17,"display","displayed","displayed","પ્રદર્શિત કરવું",1],
+[17,"point","pointed","pointed","ચીંધવું",1],
+[17,"gaze","gazed","gazed","એકીટશે જોવું",1],
+[17,"spot","spotted","spotted","જોઈ લેવું",1],
+[17,"witness","witnessed","witnessed","સાક્ષી થવું",1],
+[17,"identify","identified","identified","ઓળખી કાઢવું",1],
+[17,"smell","smelt","smelt","સૂંઘવું",0],
+[17,"touch","touched","touched","અડકવું",1],
+[17,"sense","sensed","sensed","અનુભૂતિ થવું",1],
+[18,"allow","allowed","allowed","મંજૂરી આપવું",1],
+[18,"forbid","forbade","forbidden","મનાઈ કરવું",0],
+[18,"permit","permitted","permitted","પરવાનગી આપવું",1],
+[18,"ban","banned","banned","પ્રતિબંધ મૂકવું",1],
+[18,"punish","punished","punished","સજા કરવું",1],
+[18,"reward","rewarded","rewarded","ઈનામ આપવું",1],
+[18,"arrest","arrested","arrested","ધરપકડ કરવું",1],
+[18,"release","released","released","છોડવું",1],
+[18,"judge","judged","judged","ન્યાય કરવું",1],
+[18,"accuse","accused","accused","આરોપ મૂકવું",1],
+[18,"prove","proved","proved","સાબિત કરવું",1],
+[18,"deny","denied","denied","નકારવું",1],
+[18,"confess","confessed","confessed","કબૂલ કરવું",1],
+[18,"obey","obeyed","obeyed","આજ્ઞા માનવું",1],
+[18,"disobey","disobeyed","disobeyed","આજ્ઞા ન માનવું",1],
+[18,"protect","protected","protected","રક્ષણ કરવું",1],
+[18,"violate","violated","violated","ઉલ્લંઘન કરવું",1],
+[18,"enforce","enforced","enforced","અમલ કરવું",1],
+[18,"sue","sued","sued","કેસ કરવું",1],
+[18,"steal","stole","stolen","ચોરવું",0],
+[18,"rob","robbed","robbed","લૂંટવું",1],
+[18,"cheat","cheated","cheated","છેતરવું",1],
+[18,"lie","lied","lied","જૂઠું બોલવું",1],
+[18,"swear","swore","sworn","સોગંદ ખાવું",0],
+[18,"testify","testified","testified","સાક્ષી આપવું",1],
+[19,"do","did","done","કરવું",0],
+[19,"have","had","had","ધરાવવું",0],
+[19,"be","was / were","been","હોવું",0],
+[19,"become","became","become","બનવું",0],
+[19,"let","let","let","દેવું",0],
+[19,"need","needed","needed","જરૂર હોવું",1],
+[19,"want","wanted","wanted","ઇચ્છવું",1],
+[19,"try","tried","tried","પ્રયત્ન કરવું",1],
+[19,"use","used","used","ઉપયોગ કરવું",1],
+[19,"open","opened","opened","ખોલવું",1],
+[19,"close","closed","closed","બંધ કરવું",1],
+[19,"push","pushed","pushed","ધકેલવું",1],
+[19,"pull","pulled","pulled","ખેંચવું",1],
+[19,"press","pressed","pressed","દબાવવું",1],
+[19,"wait","waited","waited","રાહ જોવું",1],
+[19,"happen","happened","happened","બનવું (ઘટના)",1],
+[19,"check","checked","checked","ચકાસવું",1],
+[19,"test","tested","tested","ચકાસણી કરવું",1],
+[19,"add","added","added","ઉમેરવું",1],
+[19,"raise","raised","raised","ઉઠાવવું",1],
+[19,"increase","increased","increased","વધારવું",1],
+[19,"decrease","decreased","decreased","ઘટાડવું",1],
+[19,"continue","continued","continued","ચાલુ રાખવું",1],
+[19,"prevent","prevented","prevented","અટકાવવું",1],
+[19,"cause","caused","caused","કારણ બનવું",1]
+];
+
+let cat=-1,tp=-1,query="",filtered=[],shown=0;
+const PER=60;
+
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+
+function init(){
+  // Build category chips
+  const cw=document.getElementById("cats");
+  let h='<button class="chip on" onclick="setCat(-1)">All</button>';
+  C.forEach((c,i)=>{h+='<button class="chip" onclick="setCat('+i+')">'+esc(c)+'</button>'});
+  cw.innerHTML=h;
+
+  // Build type buttons
+  const tw=document.getElementById("types");
+  tw.innerHTML='<button class="tbtn on" onclick="setTp(-1)">All</button><button class="tbtn" onclick="setTp(0)">Irregular</button><button class="tbtn" onclick="setTp(1)">Regular</button>';
+
+  // Search
+  document.getElementById("q").addEventListener("input",function(){query=this.value.trim().toLowerCase();applyFilter()});
+
+  // Random
+  document.getElementById("rnd").addEventListener("click",showRandom);
+
+  // Theme
+  let theme;try{theme=localStorage.getItem("verb-theme")}catch(e){}
+  if(theme)document.documentElement.setAttribute("data-theme",theme);
+  updateThemeBtn();
+  document.getElementById("thm").addEventListener("click",toggleTheme);
+
+  // Load more
+  document.getElementById("more").addEventListener("click",loadMore);
+
+  // Back to top
+  const topBtn=document.getElementById("top");
+  window.addEventListener("scroll",()=>{topBtn.hidden=window.scrollY<400});
+  topBtn.addEventListener("click",()=>window.scrollTo({top:0,behavior:"smooth"}));
+
+  applyFilter();
+}
+
+function setCat(i){
+  cat=i;
+  document.querySelectorAll(".cats .chip").forEach((b,idx)=>{b.classList.toggle("on",idx===(i+1))});
+  applyFilter();
+}
+
+function setTp(t){
+  tp=t;
+  document.querySelectorAll(".types .tbtn").forEach((b,idx)=>{
+    const vals=[-1,0,1];
+    b.classList.toggle("on",vals[idx]===t);
+  });
+  applyFilter();
+}
+
+function applyFilter(){
+  filtered=D.filter(d=>{
+    if(cat!==-1&&d[0]!==cat)return false;
+    if(tp!==-1&&d[5]!==tp)return false;
+    if(query){
+      return d[1].toLowerCase().includes(query)||d[2].toLowerCase().includes(query)||d[3].toLowerCase().includes(query)||d[4].includes(query);
+    }
+    return true;
+  });
+  shown=0;
+  document.getElementById("grid").innerHTML="";
+  document.getElementById("rand").hidden=true;
+  loadMore();
+  document.getElementById("cnt").textContent=filtered.length;
+  document.getElementById("empty").hidden=filtered.length>0;
+}
+
+function loadMore(){
+  const batch=filtered.slice(shown,shown+PER);
+  const grid=document.getElementById("grid");
+  batch.forEach(d=>{grid.appendChild(makeCard(d))});
+  shown+=batch.length;
+  document.getElementById("more").hidden=shown>=filtered.length;
+}
+
+function makeCard(d){
+  const el=document.createElement("div");
+  el.className="c"+(d[5]===0?" ir":"");
+  const isIrr=d[5]===0;
+  el.innerHTML=
+    '<div class="c-h"><span class="v1">'+esc(d[1])+'</span><span class="badge '+(isIrr?"ir":"re")+'">'+(isIrr?"Irregular":"Regular")+'</span></div>'+
+    '<div class="c-f"><span><span class="l">V2</span><span class="f">'+esc(d[2])+'</span></span><span><span class="l">V3</span><span class="f">'+esc(d[3])+'</span></span></div>'+
+    '<div class="c-g">'+esc(d[4])+'</div>';
+  return el;
+}
+
+function showRandom(){
+  const pool=filtered.length?filtered:D;
+  const d=pool[Math.floor(Math.random()*pool.length)];
+  const isIrr=d[5]===0;
+  const box=document.getElementById("rand");
+  box.hidden=false;
+  box.innerHTML=
+    '<button class="close" onclick="this.parentElement.hidden=true">&times;</button>'+
+    '<div class="rv1">'+esc(d[1])+'</div>'+
+    '<div class="rforms"><span><span class="rl">V2</span><span class="rf">'+esc(d[2])+'</span></span><span><span class="rl">V3</span><span class="rf">'+esc(d[3])+'</span></span></div>'+
+    '<div class="rguj">'+esc(d[4])+'</div>'+
+    '<div class="rmeta"><span class="badge '+(isIrr?"ir":"re")+'">'+(isIrr?"Irregular":"Regular")+'</span><span>'+esc(C[d[0]])+'</span></div>';
+  box.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+
+function toggleTheme(){
+  const r=document.documentElement;
+  const cur=r.getAttribute("data-theme");
+  let next;
+  if(!cur)next="dark";
+  else if(cur==="dark")next="light";
+  else{r.removeAttribute("data-theme");try{localStorage.removeItem("verb-theme")}catch(e){}updateThemeBtn();return}
+  r.setAttribute("data-theme",next);
+  try{localStorage.setItem("verb-theme",next)}catch(e){}
+  updateThemeBtn();
+}
+
+function updateThemeBtn(){
+  const cur=document.documentElement.getAttribute("data-theme");
+  const labels={"dark":"Light","light":"Auto",null:"Dark"};
+  document.getElementById("thm").textContent=labels[cur]||"Dark";
+}
+
+init();
+
+// When embedded in index.html: follow the parent's theme and hide own toggle
+window.addEventListener("message",function(e){
+  if(!e.data||e.data.type!=="theme")return;
+  if(e.data.value)document.documentElement.setAttribute("data-theme",e.data.value);
+  else document.documentElement.removeAttribute("data-theme");
+  updateThemeBtn();
+});
+if(window.self!==window.top)document.getElementById("thm").hidden=true;
+</script>
+</body>
+</html>
